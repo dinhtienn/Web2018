@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+}
+
+/* Properties */
+.container {
+    width: 68%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+/* Modules */
+/* Search */
+.container-search{
+    position: relative;
+}
+
+.container-search input#search{
+    height: 40px;
+    background: #e8ecf3;
+    border: none;
+    font-size: 12pt;
+    float: left;
+    padding-left: 45px;
+    border-radius: 10px;
+}
+
+.container-search .icon{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 12px;
+}
+
+/* Navigation */
+.navigation {
+    text-align: center;
+    background: #ff9900;
+}
+
+.navigation ul li {
+    display: inline-table;
+    height: 55px;
+    line-height: 55px;
+    width: 7%;
+    border-left: #ffbb33 solid 0.5px;
+    border-right: #ffbb33 solid 0.5px;
+    margin-left: -5px;
+    position: relative;
+}
+
+.navigation ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navigation ul li a:hover {
+    color: #ffffff;
+    background: #ffaa00;
+    cursor: pointer;
+}
+
+.navigation ul li > .dropdown {
+    display: none;
+    position: absolute;
+}
+
+.navigation ul li:hover .dropdown {
+    display: block;
+}
+
+/* Fonts */
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('../fonts/Roboto-Regular.ttf')
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url('../fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url('../fonts/Roboto-Bold.ttf');
+}
+
+.f-regular-30 {
+    font-family: Roboto-Regular;
+    font-size: 30pt;
+}
+
+.f-regular-20 {
+    font-family: Roboto-Regular;
+    font-size: 20pt;
+}
+
+.f-regular-15 {
+    font-family: Roboto-Regular;
+    font-size: 15pt;
+}
+
+.f-regular-14 {
+    font-family: Roboto-Regular;
+    font-size: 14pt;
+}
+
+.f-regular-13 {
+    font-family: Roboto-Regular;
+    font-size: 13pt;
+}
+
+.f-regular-12 {
+    font-family: Roboto-Regular;
+    font-size: 12pt;
+}
+
+.f-medium-17 {
+    font-family: Roboto-Medium;
+    font-size: 17pt;
+}
+
+.f-medium-15 {
+    font-family: Roboto-Medium;
+    font-size: 15pt;
+}
+
+.f-medium-13 {
+    font-family: Roboto-Medium;
+    font-size: 13pt;
+}
+
+.f-medium-12 {
+    font-family: Roboto-Medium;
+    font-size: 12pt;
+}
+
+.f-bold-30 {
+    font-family: Roboto-Bold;
+    font-size: 30pt;
+}
