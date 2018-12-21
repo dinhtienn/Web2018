@@ -12,8 +12,8 @@
         <div>
             <header>
                 <!-- Header Above -->
-                <div class="container">
-                    <nav class="d-flex justify-content-between">
+                <div id="header-above">
+                    <nav class="container d-flex justify-content-between">
                         <div class="d-flex w-50">
                             <!-- Logo -->
                             <div>
@@ -37,8 +37,8 @@
                     </nav>
                 </div>
                 <!-- Header Below -->
-                <div>
-                    <nav class="navigation f-medium-15">
+                <div style="background: #ff9900;">
+                    <nav class="container navigation f-medium-15">
                         <div class="nav-item"><a href="">Lớp 12</a></div>
                         <div class="nav-item"><a href="">Lớp 11</a></div>
                         <div class="nav-item"><a href="">Lớp 10</a></div>
@@ -74,13 +74,39 @@
                 </div>
             </header>
         </div>
-        <div>
+        <div style="background: #f1f1f1">
             <!-- Banner -->
             <img src="./images/homepage/banner.png" alt="banner-hp">
-            <div style="background: dimgray; height: 2214px">Body: Content</div>
-            <div style="background: firebrick; height: 288px">Body: Service</div>
+            <div class="container" style="height: 2210px">
+                <div style="height: 33%; background: dimgray">
+                    <div style="height: 14%; background: lightcoral">tab-head1</div>
+                    <div>tab-post</div>
+                </div>
+                <div style="height: 33%; background: red">
+                    <div style="height: 14%; background: lightcoral">tab-head2</div>
+                    <div>tab-post</div>
+                </div>
+                <div style="height: 34%; background: blue">
+                    <div style="height: 14%; background: lightcoral">tab-head2</div>
+                    <div>tab-post</div>
+                </div>
+            </div>
+            <div class="container" style="height: 288px">
+                <div style="height: 20%; background: lime">
+                    <h3>Chúng tôi cung cấp cho bạn</h3>
+                </div>
+                <div style="display: flex; height: 80%">
+                    <div style="width: 100%; background: firebrick">Tài nguyên</div>
+                    <div style="width: 100%; background: lightseagreen">Nội dung</div>
+                    <div style="width: 100%; background: lightslategray">Giao diện</div>
+                </div>
+            </div>
         </div>
-        <div style="background: darkgreen; height: 288px">Footer</div>
+        <div style="height: 288px">
+            <div style="background: darkgreen; height: 42%">logo</div>
+            <div style="background: darkgoldenrod; height: 32%">tab</div>
+            <div style="background: darkorchid; height: 26%">copyright</div>
+        </div>
     </div>
 </body>
 </html>
