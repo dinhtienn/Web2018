@@ -7,17 +7,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Homepage</title>
 </head>
-
-<style>
-    .layer_opacity {
-        background: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        margin-top: 100px;
-        display: none;
-    }
-</style>
 <body style="background: #ffffff">
     <div class="layer_opacity"></div>
     <!-- Header: Search -->
@@ -338,8 +327,10 @@
                             <p class="f-regular-30">Mới nhất</p>
                         </div>
                         <div>
-                            <a class="f-regular-13" href="">Xem tất cả</a>
-                            <img src="./images/homepage/icon-all.png" alt="icon-all">
+                            <div class="view-all">
+                                <a class="f-regular-13" href="">Xem tất cả</a>
+                                <img src="./images/homepage/icon-all.png" alt="icon-all">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -455,9 +446,17 @@
                             <div class="trash-box"></div>
                             <p class="f-regular-30">Lớp 9</p>
                         </div>
+                        <div class="f-regular-12">
+                            <button>Toán học</button>
+                            <button>Văn học</button>
+                            <button>Sinh học</button>
+                            <button>Địa lý</button>
+                        </div>
                         <div>
-                            <a class="f-regular-13" href="">Xem tất cả</a>
-                            <img src="./images/homepage/icon-all.png" alt="icon-all">
+                            <div class="view-all">
+                                <a class="f-regular-13" href="">Xem tất cả</a>
+                                <img src="./images/homepage/icon-all.png" alt="icon-all">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -573,9 +572,17 @@
                             <div class="trash-box"></div>
                             <p class="f-regular-30">Lớp 8</p>
                         </div>
+                        <div class="f-regular-12">
+                            <button>Toán học</button>
+                            <button>Văn học</button>
+                            <button>Sinh học</button>
+                            <button>Địa lý</button>
+                        </div>
                         <div>
-                            <a class="f-regular-13" href="">Xem tất cả</a>
-                            <img src="./images/homepage/icon-all.png" alt="icon-all">
+                            <div class="view-all">
+                                <a class="f-regular-13" href="">Xem tất cả</a>
+                                <img src="./images/homepage/icon-all.png" alt="icon-all">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -729,8 +736,8 @@
             <div class="logo">
                 <img src="./images/all/logo.png" alt="logo">
             </div>
-            <div class="sub-menu">
-                <div class="sub-menu-tab f-regular-15">
+            <div class="menu">
+                <div class="menu-tab f-regular-15">
                     <div><a href="">Toán học</a></div>
                     <div><a href="">Văn học</a></div>
                     <div><a href="">Giáo dục công dân</a></div>
@@ -744,11 +751,15 @@
         </div>
     </footer>
     <script>
-        document.getElementsByClassName("sub-menu").onmouseover = function() {
-            layer_opacity.style.display = "flex";
-        }
-        document.getElementsByClassName("sub-menu").onmouseout = function() {
-            layer_opacity.style.display = "none";
+        var layerOpacity = document.getElementsByClassName("layer_opacity")[0];
+        var subMenu = document.getElementsByClassName("sub-menu");
+        for (i = 0; i < subMenu.length; i++) {
+            subMenu[i].onmouseover = function() {
+                layerOpacity.style.height = document.getElementsByTagName('body')[0].clientHeight + "px";
+            };
+            subMenu[i].onmouseout = function() {
+                layerOpacity.style.height = "0px";
+            }
         }
     </script>
 </body>

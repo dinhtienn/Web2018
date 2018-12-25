@@ -18,6 +18,15 @@
 }
 
 /* Modules */
+/* Layer Opacity */
+.layer_opacity {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    margin-top: 100px;
+    z-index: 2;
+}
+
 /* Header */
 header .header-container-1 {
     width: 25%;
@@ -122,6 +131,7 @@ nav .sub-menu .subject {
     display: none;
     position: absolute;
     background: #ffffff;
+    z-index: 2;
 }
 
 nav .sub-menu:hover .subject {
@@ -154,7 +164,7 @@ nav .sub-menu .subject .subject-column2 {
 }
 
 nav .sub-menu .subject .subject-column3 {
-    width: 70px;
+    width: 69px;
     display: flex;
     align-items: flex-end;
 }
@@ -207,6 +217,7 @@ nav .sub-menu .subject div {
     display: flex;
     height: 80px;
     align-items: center;
+    justify-content: center;
 }
 
 .tab-heading .tab-heading-container {
@@ -217,7 +228,7 @@ nav .sub-menu .subject div {
 }
 
 .tab-heading .tab-heading-container div {
-    width: 12%;
+    width: 20%;
     height: 50px;
 }
 
@@ -237,21 +248,48 @@ nav .sub-menu .subject div {
     border-radius: 10px;
 }
 
+.tab-heading .tab-heading-container div:nth-child(2) {
+    width: 40%;
+    padding-top: 10px;
+    margin-left: -33%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.tab-heading .tab-heading-container div:nth-child(2) button {
+    color: #26af92;
+    border: #26af92 solid 2px;
+    background: #f1f1f1;
+    border-radius: 15px;
+    width: 18%;
+    height: 25px;
+}
+
+.tab-heading .tab-heading-container div:nth-child(2) button:hover {
+    color: #ffffff;
+    background: #26af92;
+    cursor: pointer;
+}
+
 .tab-heading .tab-heading-container div:last-child {
     display: flex;
     color: #26af92;
     align-items: center;
     padding-top: 10px;
-    padding-left: 55px;
-    box-sizing: border-box
+    box-sizing: border-box;
+    justify-content: flex-end;
 }
 
-.tab-heading .tab-heading-container div:last-child a {
+.tab-heading .tab-heading-container div:last-child .view-all {
+    width: 100%;
+}
+
+.tab-heading .tab-heading-container div:last-child .view-all a {
     color: #26af92;
     text-decoration: none;
 }
 
-.tab-heading .tab-heading-container div:last-child img {
+.tab-heading .tab-heading-container div:last-child .view-all img {
     height: 10px;
     margin-left: 5px;
 }
@@ -264,8 +302,8 @@ nav .sub-menu .subject div {
 }
 
 .post-model {
-    margin: 15px 20px;
-    width: 550px;
+    margin: 15px 2%;
+    width: 46%;
     height: 120px;
     background: #ffffff;
     display: flex;
@@ -347,7 +385,7 @@ footer .logo {
     justify-content: center;
 }
 
-footer .sub-menu {
+footer .menu {
     height: 70px;
     border-top: #444f5f solid 1px;
     border-bottom: #444f5f solid 1px;
@@ -355,35 +393,35 @@ footer .sub-menu {
     align-items: center;
 }
 
-footer .sub-menu .sub-menu-tab {
+footer .menu .menu-tab {
     height: 14px;
     width: 100%;
     display: flex; 
 }
 
-footer .sub-menu .sub-menu-tab div {
+footer .menu .menu-tab div {
     padding: 0px 45px;
     text-align: center;
 }
 
-footer .sub-menu .sub-menu-tab div:nth-child(2),
-footer .sub-menu .sub-menu-tab div:nth-child(3),
-footer .sub-menu .sub-menu-tab div:nth-child(4),
-footer .sub-menu .sub-menu-tab div:nth-child(5),
-footer .sub-menu .sub-menu-tab div:nth-child(6) {
+footer .menu .menu-tab div:nth-child(2),
+footer .menu .menu-tab div:nth-child(3),
+footer .menu .menu-tab div:nth-child(4),
+footer .menu .menu-tab div:nth-child(5),
+footer .menu .menu-tab div:nth-child(6) {
     border-left: #acafb5 solid 1px;
     border-right: #acafb5 solid 1px;
 }
 
-footer .sub-menu .sub-menu-tab div a {
+footer .menu .menu-tab div a {
     color: #acafb5;
     text-decoration: none;
 }
 
-footer .sub-menu .sub-menu-tab div:nth-child(3),
-footer .sub-menu .sub-menu-tab div:nth-child(4),
-footer .sub-menu .sub-menu-tab div:nth-child(5),
-footer .sub-menu .sub-menu-tab div:nth-child(6) {
+footer .menu .menu-tab div:nth-child(3),
+footer .menu .menu-tab div:nth-child(4),
+footer .menu .menu-tab div:nth-child(5),
+footer .menu .menu-tab div:nth-child(6) {
     margin-left: -1px;
 }
 
@@ -464,4 +502,10 @@ footer .copyright {
 .f-bold-30 {
     font-family: Roboto-Bold;
     font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .tab-heading .tab-heading-container {
+        max-width: 70%;
+    }
 }
