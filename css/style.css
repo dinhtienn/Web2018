@@ -109,6 +109,7 @@ header .header-container-2 .search-container input#search:focus {
 /* Navigation */
 nav {
     background: #ff9900;
+    width: 100%;
 }
 
 nav .sub-menu {
@@ -419,12 +420,15 @@ footer {
 }
 
 footer .logo {
-    height: 100px;
     justify-content: center;
 }
 
+footer .logo a {
+    margin: 30px 0;
+}
+
 footer .menu {
-    height: 70px;
+    width: 100%;
     border-top: #444f5f solid 1px;
     border-bottom: #444f5f solid 1px;
     display: flex;
@@ -435,6 +439,7 @@ footer .menu .menu-tab {
     height: 14px;
     width: 100%;
     display: flex; 
+    margin: 23px 0;
 }
 
 footer .menu .menu-tab div {
@@ -469,11 +474,14 @@ footer .menu .menu-tab div:nth-child(6) {
 }
 
 footer .copyright {
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #acafb5;
+}
+
+footer .copyright p {
+    margin: 20px 0;
 }
 
 /* Fonts */
@@ -545,4 +553,13 @@ footer .copyright {
 .f-bold-30 {
     font-family: Roboto-Bold;
     font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        display: none;
+    }
+    .post-model .post-title a {
+        color: #ff9900;
+    }
 }
