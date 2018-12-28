@@ -37,7 +37,7 @@ menuButton.onclick = function() {
     setTimeout(function(){
         navMobileContainer.style.display = "block";
         layerOpacity.style.width = "100%";
-    }, 100);
+    }, 200);
     layerOpacity.style.height = document.getElementsByTagName('body')[0].clientHeight + "px";
 }
 
@@ -45,5 +45,8 @@ console.log(closeButton);
 closeButton.onclick = function() {
     navMobileContainer.style.display = "none";
     navTag.style.width = "0%";
-    layerOpacity.style.height = "0px";
+    layerOpacity.style.width = "0";
+    setTimeout(function(){
+        layerOpacity.style.height = "0px";
+    }, 100);
 }
