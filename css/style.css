@@ -602,7 +602,7 @@ footer .copyright p {
         display: block;
         height: 35px;
         width: 80%;
-        padding: 4px 5%;
+        padding: 4px 6%;
         position: relative;
     }
 
@@ -618,8 +618,8 @@ footer .copyright p {
 
     .mobile-header .search-container .icon {
         position: absolute;
-        margin-left: 83%;
-        margin-top: 9px;
+        margin-left: 80%;
+        margin-top: 8px;
         color: #7088a9;
     }
 
