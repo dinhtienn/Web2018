@@ -28,8 +28,6 @@
     width: 100%;
     margin-top: 103px;
     z-index: 2;
-    transition: 0.6s ease-in;
-    transition: 0.2s ease-out;
 }
 
 /* Header */
@@ -158,11 +156,13 @@ nav .sub-menu .subject {
     z-index: 2;
 }
 
-nav .sub-menu:hover .subject {
-    display: flex;
-    margin-left: -1px;
-    padding: 15px 0 0 5px;
-    box-shadow: 10px 10px 5px 0.1px #666666;
+@media screen and (min-width: 769px) {
+    nav .sub-menu:hover .subject {
+        display: flex;
+        margin-left: -1px;
+        padding: 15px 0 0 5px;
+        box-shadow: 10px 10px 5px 0.1px #666666;
+    }
 }
 
 nav .sub-menu:nth-child(10):hover .subject, 
@@ -185,11 +185,13 @@ nav .sub-menu .subject .subject-column1 div,
     border-radius: 20px;
     margin: 10px;
     text-align: start;
-    padding-left: 5%;
+    padding-left: 10%;
 }
 
-nav .sub-menu .subject .subject-column1 div:last-child {
-    margin-bottom: 15px;
+@media screen and (min-width: 769px) {
+    nav .sub-menu .subject .subject-column1 div:last-child {
+        margin-bottom: 15px;
+    }
 }
 
 nav .sub-menu .subject .subject-column1 div a,
@@ -209,13 +211,15 @@ nav .sub-menu .subject .subject-column1 div a,
     }
 }
 
-nav .sub-menu .subject div div:hover {
-    border: #ff9900 solid 2px;
-    animation: border-tranform 0.2s;
-}
-
-nav .sub-menu .subject div div:hover a {
-    color: #ff9900;
+@media screen and (min-width: 769px) {
+    nav .sub-menu .subject div div:hover {
+        border: #ff9900 solid 2px;
+        animation: border-tranform 0.2s;
+    }
+    
+    nav .sub-menu .subject div div:hover a {
+        color: #ff9900;
+    }
 }
 
 /* Banner Homepage */
@@ -562,8 +566,10 @@ footer .copyright p {
 
 @media screen and (max-width: 768px) {
     .layer_opacity {
-        margin-top: 55px;
+        margin-top: 52px;
         width: 0;
+        transition: 0.6s ease-in;
+        transition: 0.2s ease-out;
     }
 
     header {
@@ -669,7 +675,7 @@ footer .copyright p {
     nav .sub-menu {
         text-align: start;
         border: none;
-        padding: 10px 5%;
+        padding: 5px 5%;
         display: flex;
         justify-content: space-between;
     }
@@ -705,14 +711,30 @@ footer .copyright p {
         flex-direction: column;
         background: #26af92;
         box-shadow: none;
+        width: 100%;
+        margin-left: -13px;
+        margin-top: 51px;
+        padding: 0;
     }
 
     nav .container .sub-menu .subject div div {
         border: none;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 0;
+        border-bottom: #2bb69c solid 1px;
+        padding: 5px 0;
+        z-index: 5;
+    }
+
+    nav .container .sub-menu:hover .subject {
+        display: flex;
     }
 
     nav .container .sub-menu .subject div div a {
         color: #ffffff;
+        font-size: 14px;
+        margin-left: 8%;
     }
 
     nav .container .sub-menu .subject .subject-column3 {

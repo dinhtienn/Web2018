@@ -26,7 +26,7 @@ searchField.onblur = function () {
     iconSearch.style.transform = "scale(1)";
 }
 
-// Mobile: Menu onClick
+// Mobile: Menu CanVas
 var menuButton = document.getElementById("icon-nav");
 let navTag = document.getElementsByTagName("nav")[0];
 var navMobileContainer = document.getElementsByClassName("nav-mobile-container")[0];
@@ -47,5 +47,23 @@ closeButton.onclick = function() {
     layerOpacity.style.width = "0";
     setTimeout(function(){
         layerOpacity.style.height = "0px";
-    }, 100);
+    }, 200);
 }
+
+// Mobile: Menu Accordion
+// var iconDown = document.getElementsByClassName("icon-down");
+// var subject = document.getElementsByClassName("subject");
+
+// for (let i = 0; i < iconDown.length; i++) {
+//     subMenu[i].onclick = function() {
+//         if (window.outerWidth <= 768) {
+//             if (subject[i].style.display = "none") {
+//                 subject[i].style.display = "flex";
+//             } 
+            
+//             else if (subject[i].style.display = "flex") {
+//                 subject[i].style.display = "none";
+//             }
+//         }
+//     }
+// }
