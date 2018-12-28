@@ -8,6 +8,10 @@
     margin: 0 auto;
 }
 
+.d-none {
+    display: none;
+}
+
 .d-flex {
     display: flex;
 }
@@ -22,8 +26,10 @@
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 103px;
     z-index: 2;
+    transition: 0.6s ease-in;
+    transition: 0.2s ease-out;
 }
 
 /* Header */
@@ -43,7 +49,6 @@ header .header-container-1 .menu {
 
 header .header-container-1 .menu button {
     color: #666666;
-    height: 40px;
     line-height: 30px;
     background: #ffffff;
     display: flex;
@@ -64,7 +69,6 @@ header .header-container-1 .menu button img {
 }
 
 header .header-container-2 {
-    height: 55px;
     width: 30%;
     display: flex;
     align-items: center;
@@ -72,6 +76,7 @@ header .header-container-2 {
 }
 
 header .header-container-2 .search-container {
+    margin: 10px 0;
     height: 38px;
     position: relative;
 }
@@ -116,6 +121,7 @@ nav .sub-menu {
     text-align: center;
     width: 100%;
     line-height: 45px;
+    background: #ff9900;
     border-left: #ffbb33 solid 1px;
     border-right: #ffbb33 solid 1px;
     position: relative;
@@ -163,8 +169,7 @@ nav .sub-menu:nth-child(10):hover .subject,
 nav .sub-menu:nth-child(11):hover .subject, 
 nav .sub-menu:nth-child(12):hover .subject,
 nav .sub-menu:last-child:hover .subject {
-    display: flex;
-    margin-left: -205px;
+    margin-left: -227px;
 }
 
 nav .sub-menu .subject .subject-column3 {
@@ -175,12 +180,12 @@ nav .sub-menu .subject .subject-column3 {
 nav .sub-menu .subject .subject-column1 div,
 .sub-menu .subject .subject-column2 div {
     width: 100px;
-    height: 28px;
     line-height: 30px;
     border: #ffffff solid 2px;
     border-radius: 20px;
-    margin-bottom: 10px;
-    margin: 5px 10px;
+    margin: 10px;
+    text-align: start;
+    padding-left: 5%;
 }
 
 nav .sub-menu .subject .subject-column1 div:last-child {
@@ -278,7 +283,7 @@ nav .sub-menu .subject div div:hover a {
     border-radius: 15px;
     outline: none;
     width: 18%;
-    height: 25px;
+    padding: 5px 0;
     transition: 0.2s ease-in-out;
 }
 
@@ -556,10 +561,226 @@ footer .copyright p {
 }
 
 @media screen and (max-width: 768px) {
+    .layer_opacity {
+        margin-top: 55px;
+        width: 0;
+    }
+
     header {
         display: none;
     }
-    .post-model .post-title a {
-        color: #ff9900;
+    
+    .mobile-header {
+        background: #ff9900;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+    }
+
+    .mobile-header #icon-nav {
+        background: #df9f20;
+        display: block;
+        color: #ffffff;
+        width: 15%;
+        margin: 5px 0 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+    }
+
+    .mobile-header .search-container {
+        display: block;
+        height: 35px;
+        width: 85%;
+        padding: 5px 5%;
+        position: relative;
+    }
+
+    .mobile-header .search-container input {
+        color: #666666;
+        height: 100%;
+        width: 100%;
+        border: none;
+        padding-left: 10px;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .mobile-header .search-container .icon {
+        position: absolute;
+        margin-left: 83%;
+        margin-top: 10px;
+        color: #7088a9;
+    }
+
+    nav {
+        width: 0%;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        transition: 0.5s ease-in-out;
+    }
+
+    nav .nav-mobile-container {
+        display: none;
+    }
+
+    nav .logo {
+        background: #ffffff;
+        padding: 10px 5%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav .logo a {
+        display: block;
+    }
+
+    nav .logo i {
+        display: block;
+        font-size: 130%;
+        color: #26af92;
+    }
+
+    nav .menu-name {
+        width: 100%;
+        display: block;
+        background: #26af92;
+        color: #ffffff;
+        display: flex;
+        padding: 20px 5%;
+    }
+
+    nav .menu-name p {
+        font-family: Roboto-Regular;
+        font-size: 17px;
+    }
+
+    nav .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav .sub-menu {
+        text-align: start;
+        border: none;
+        padding: 10px 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav .sub-menu:nth-child(2),
+    nav .sub-menu:nth-child(3),
+    nav .sub-menu:nth-child(4),
+    nav .sub-menu:nth-child(5),
+    nav .sub-menu:nth-child(6),
+    nav .sub-menu:nth-child(7),
+    nav .sub-menu:nth-child(8),
+    nav .sub-menu:nth-child(9),
+    nav .sub-menu:nth-child(10),
+    nav .sub-menu:nth-child(11),
+    nav .sub-menu:nth-child(12) {
+        margin-left: 0;
+    }
+
+    nav .sub-menu a {
+        font-size: 17px;
+    }
+
+    nav .sub-menu .icon-down {
+        display: block;
+        color: #ffffff;
+        font-size: 140%;
+        background: #df9f20;
+        width: 10%;
+        text-align: center;
+    }
+
+    nav .container .sub-menu .subject {
+        flex-direction: column;
+        background: #26af92;
+        box-shadow: none;
+    }
+
+    nav .container .sub-menu .subject div {
+        width: 100%;
+    }
+
+    nav .container .sub-menu .subject div div {
+        border: none;
+    }
+
+    nav .container .sub-menu .subject div div a {
+        color: #ffffff;
+    }
+
+    nav .container .sub-menu .subject .subject-column3 {
+        display: none;
+    }
+
+    #banner-hp {
+        display: none;
+    }
+
+    #content {
+        padding: 20px 0;
+    }
+
+    .f-regular-30 {
+        font-family: Roboto-Regular;
+        font-size: 25px;
+    }
+
+    .tab-heading {
+        padding: 0 1%;
+    }
+
+    .tab-heading .tab-heading-container {
+        padding: 0 1%;
+    }
+    
+    .tab-heading .tab-heading-container div:first-child {
+        width: 35%;
+    }
+
+    .tab-heading .tab-heading-container div:nth-child(2) {
+        display: none;
+    }
+
+    .tab-post {
+        margin: 0 0 10px 0;
+    }
+
+    .post-model {
+        margin: 10px 2%;
+        padding: 10px 2%;
+        width: 95%;
+    }
+
+    .post-model .post-heading .post-author {
+        width: 30%;
+    }
+    
+    .post-model .post-heading .post-info {
+        width: 25%;
+    }
+
+    #service {
+        display: none;
+    }
+
+    footer .menu .menu-tab {
+        display: none;
+    }
+
+    footer .logo a {
+        margin: 10px 0;
+    }
+
+    footer .copyright p {
+        margin: 5px 0;
     }
 }
