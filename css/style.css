@@ -493,6 +493,31 @@ footer .copyright p {
     margin: 20px 0;
 }
 
+/* Image */
+.sprite { background: url("../images/miny.png") no-repeat top left; width: 69px; height: 69px;  } 
+.sprite .logo { background-position: 0 0; width: 96px; height: 38px; } 
+.sprite .search { background-position: -106px 0; width: 21px; height: 18px; } 
+.sprite .header-subject { background-position: -137px 0; width: 23px; height: 20px; } 
+.sprite .icon-all { background-position: -170px 0; width: 4px; height: 7px; } 
+.sprite .icon-view { background-position: -184px 0; width: 16px; height: 10px; } 
+.sprite .icon-heart { background-position: -210px 0; width: 13px; height: 12px; } 
+.sprite .one { background-position: -312px 0; } 
+.sprite .two { background-position: -391px 0; } 
+.sprite .three { background-position: -470px 0; } 
+.sprite .four { background-position: -549px 0; } 
+.sprite .five { background-position: -628px 0; } 
+.sprite .six { background-position: -707px 0; } 
+.sprite .seven { background-position: -786px 0; } 
+.sprite .eight { background-position: -1023px 0; } 
+.sprite .nine { background-position: -865px 0; } 
+.sprite .ten { background-position: -1102px 0; } 
+.sprite .elevent { background-position: -944px 0; } 
+.sprite .twelve { background-position: -233px 0; } 
+.sprite .icon-download { background-position: -1181px 0; width: 63px; height: 63px; } 
+.sprite .icon-file { background-position: -1254px 0; width: 52px; height: 63px; } 
+.sprite .icon-pc { background-position: -1316px 0; width: 68px; height: 63px; } 
+.sprite .banner { background-position: -1394px 0; height: 235px; } 
+
 /* Fonts */
 @font-face {
     font-family: Roboto-Regular;
