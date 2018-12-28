@@ -50,18 +50,17 @@ closeButton.onclick = function() {
     }, 200);
 }
 
-// Mobile: Menu Accordion
+
+// Mobile: Menu Accordion (TESTING)
 // var iconDown = document.getElementsByClassName("icon-down");
 // var subject = document.getElementsByClassName("subject");
 
 // for (let i = 0; i < iconDown.length; i++) {
-//     subMenu[i].onclick = function() {
+//     iconDown[i].addEventListener = function() {
 //         if (window.outerWidth <= 768) {
 //             if (subject[i].style.display = "none") {
 //                 subject[i].style.display = "flex";
-//             } 
-            
-//             else if (subject[i].style.display = "flex") {
+//             } else {
 //                 subject[i].style.display = "none";
 //             }
 //         }
