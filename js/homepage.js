@@ -41,7 +41,6 @@ menuButton.onclick = function() {
     layerOpacity.style.height = document.getElementsByTagName('body')[0].clientHeight + "px";
 }
 
-console.log(closeButton);
 closeButton.onclick = function() {
     navMobileContainer.style.display = "none";
     navTag.style.width = "0%";
