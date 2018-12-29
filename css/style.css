@@ -803,6 +803,11 @@ footer .copyright p {
         margin: 0 0 10px 0;
     }
 
+    .tab-post .post-model:nth-child(5), 
+    .tab-post .post-model:nth-child(6) {
+        display:none;
+    }
+
     .post-model {
         margin: 10px 3%;
         padding: 10px 2%;
