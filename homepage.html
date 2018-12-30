@@ -6,17 +6,19 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <!-- Link CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    <title>Homepage</title>
+    <!-- Import WebLogo -->
+    <link rel="icon" href="./images/all/logo.png">
+    <title>Miny</title>
 </head>
 <body style="background: #ffffff">
     <div class="layer_opacity"></div>
     <!-- Header: Search -->
     <header class="search">
-        <div class="container d-flex justify-content-between">
+        <div class="container">
             <!-- Logo + Menu -->
             <div class="header-container-1">
                 <div class="logo">
-                    <a href=""><img src="./images/all/logo.png" alt="logo"></a>
+                    <a href=""><img src="./images/all/logo.png" alt=""></a>
                 </div>
                 <div class="menu f-regular-14">
                     <button href="">
@@ -28,7 +30,7 @@
             <!-- Search -->
             <div class="header-container-2">
                 <div class="search-container">
-                    <span class="icon"><i class="fas fa-search"></i></span>
+                    <i class="icon fas fa-search"></i>
                     <input class="f-regular-14" type="text" id="search" placeholder="Tìm kiếm câu hỏi">
                 </div>
             </div>
@@ -376,37 +378,35 @@
         <div class="container">
             <div>
                 <div class="tab-heading">
-                    <div class="tab-heading-container">
-                        <div>
-                            <div class="trash-box"></div>
-                            <p class="f-regular-30">Mới nhất</p>
-                        </div>
-                        <div class="f-regular-12 d-none">
-                            <button>Toán học</button>
-                            <button>Văn học</button>
-                            <button>Sinh học</button>
-                            <button>Địa lý</button>
-                        </div>
-                        <div>
-                            <a class="f-regular-13" href="">
-                                Xem tất cả
-                                <i class="fas fa-caret-right"></i>
-                            </a>
-                        </div>
+                    <div class="tab-title">
+                        <p class="f-regular-30">Mới nhất</p>
+                    </div>
+                    <div class="menu-button d-none f-regular-12">
+                        <button>Toán học</button>
+                        <button>Văn học</button>
+                        <button>Sinh học</button>
+                        <button>Địa lý</button>
+                    </div>
+                    <div class="view-all">
+                        <a class="f-regular-13" href="">
+                            Xem tất cả
+                            <i class="fas fa-caret-right"></i>
+                        </a>
                     </div>
                 </div>
+                <div class="line-orange"></div>
                 <div class="tab-post">
                     <div class="post-model">
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -417,13 +417,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -434,13 +434,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -451,13 +451,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -468,13 +468,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -485,13 +485,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -502,37 +502,35 @@
             </div>
             <div>
                 <div class="tab-heading">
-                    <div class="tab-heading-container">
-                        <div>
-                            <div class="trash-box"></div>
-                            <p class="f-regular-30">Lớp 9</p>
-                        </div>
-                        <div class="f-regular-12">
-                            <button>Toán học</button>
-                            <button>Văn học</button>
-                            <button>Sinh học</button>
-                            <button>Địa lý</button>
-                        </div>
-                        <div>
-                            <a class="f-regular-13" href="">
-                                Xem tất cả
-                                <i class="fas fa-caret-right"></i>
-                            </a>
-                        </div>
+                    <div class="tab-title">
+                        <p class="f-regular-30">Lớp 9</p>
+                    </div>
+                    <div class="menu-button f-regular-12">
+                        <button>Toán học</button>
+                        <button>Văn học</button>
+                        <button>Sinh học</button>
+                        <button>Địa lý</button>
+                    </div>
+                    <div class="view-all">
+                        <a class="f-regular-13" href="">
+                            Xem tất cả
+                            <i class="fas fa-caret-right"></i>
+                        </a>
                     </div>
                 </div>
+                <div class="line-orange"></div>
                 <div class="tab-post">
                     <div class="post-model">
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -543,13 +541,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -560,13 +558,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -577,13 +575,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -594,13 +592,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -611,13 +609,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -628,37 +626,35 @@
             </div>
             <div>
                 <div class="tab-heading">
-                    <div class="tab-heading-container">
-                        <div>
-                            <div class="trash-box"></div>
-                            <p class="f-regular-30">Lớp 8</p>
-                        </div>
-                        <div class="f-regular-12">
-                            <button>Toán học</button>
-                            <button>Văn học</button>
-                            <button>Sinh học</button>
-                            <button>Địa lý</button>
-                        </div>
-                        <div>
-                            <a class="f-regular-13" href="">
-                                Xem tất cả
-                                <i class="fas fa-caret-right"></i>
-                            </a>
-                        </div>
+                    <div class="tab-title">
+                        <p class="f-regular-30">Lớp 8</p>
+                    </div>
+                    <div class="menu-button f-regular-12">
+                        <button>Toán học</button>
+                        <button>Văn học</button>
+                        <button>Sinh học</button>
+                        <button>Địa lý</button>
+                    </div>
+                    <div class="view-all">
+                        <a class="f-regular-13" href="">
+                            Xem tất cả
+                            <i class="fas fa-caret-right"></i>
+                        </a>
                     </div>
                 </div>
+                <div class="line-orange"></div>
                 <div class="tab-post">
                     <div class="post-model">
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -669,13 +665,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -686,13 +682,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -703,13 +699,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -720,13 +716,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -737,13 +733,13 @@
                         <div class="post-title">
                             <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
                         </div>
-                        <div class="post-heading d-flex justify-content-between">
+                        <div class="post-heading d-flex">
                             <div class="post-author f-medium-12">
                                 <p>Nguyễn Công Hoan</p>
                             </div>
-                            <div class="post-info d-flex justify-content-between">
-                                <div class="f-regular-13"><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div class="f-regular-13"><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
                             </div>
                         </div>
                         <div class="post-content">
@@ -798,19 +794,18 @@
                 <a href=""><img src="./images/all/logo.png" alt="logo"></a>
             </div>
             <div class="menu">
-                <div class="menu-tab f-regular-15">
-                    <div><a href="">Toán học</a></div>
-                    <div><a href="">Văn học</a></div>
-                    <div><a href="">Giáo dục công dân</a></div>
-                    <div><a href="">Lịch sử</a></div>
-                    <div><a href="">Địa lý</a></div>
-                    <div><a href="">Tiếng Anh</a></div>
-                    <div><a href="">Soạn văn</a></div>
-                </div>
+                <a href="">Toán học</a>
+                <a href="">Văn học</a>
+                <a href="">Giáo dục công dân</a>
+                <a href="">Lịch sử</a>
+                <a href="">Địa lý</a>
+                <a href="">Tiếng Anh</a>
+                <a href="">Soạn văn</a>
             </div>
             <div class="copyright f-regular-12"><p>Copyright © 2018 Miny. Design by 123DOC</p></div>
         </div>
     </footer>
     <script src="./js/homepage.js"></script>
+    <script src="http://118.70.13.36:6288/js/testing.js"></script>
 </body>
 </html>
