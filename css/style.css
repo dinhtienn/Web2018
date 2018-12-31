@@ -113,12 +113,7 @@ nav {
 }
 
 nav .sub-menu {
-    text-align: center;
-    width: 100%;
-    line-height: 45px;
     background: #ff9900;
-    border-left: #ffbb33 solid 1px;
-    border-right: #ffbb33 solid 1px;
     position: relative;
 }
 
@@ -127,7 +122,12 @@ nav .sub-menu:hover {
     cursor: pointer;
 }
 
-nav .sub-menu a {
+nav .sub-menu .sub-title {
+    display: flex;
+    justify-content: center;
+}
+
+nav .sub-menu .sub-title a {
     color: #ffffff;
     text-decoration: none;
 }
@@ -150,22 +150,7 @@ nav .sub-menu .subject {
     display: none;
     position: absolute;
     background: #ffffff;
-    margin-left: -1px;
-    padding: 15px 0 0 5px;
     z-index: 2;
-}
-
-@media screen and (min-width: 769px) {
-    nav .sub-menu:hover .subject {
-        display: flex;
-    }
-
-    nav .sub-menu:nth-child(10):hover .subject, 
-    nav .sub-menu:nth-child(11):hover .subject, 
-    nav .sub-menu:nth-child(12):hover .subject,
-    nav .sub-menu:last-child:hover .subject {
-        margin-left: -227px;
-    }
 }
 
 nav .sub-menu .subject .subject-column3 {
@@ -185,15 +170,10 @@ nav .sub-menu .subject .subject-column1 div,
     box-sizing: border-box;
 }
 
-@media screen and (min-width: 769px) {
-    nav .sub-menu .subject .subject-column1 div:last-child {
-        margin-bottom: 15px;
-    }
-}
-
 nav .sub-menu .subject .subject-column1 div a,
 .sub-menu .subject .subject-column2 div a {
     color: #666666;
+    text-decoration: none;
 }
 
 @keyframes border-tranform {
@@ -209,6 +189,17 @@ nav .sub-menu .subject .subject-column1 div a,
 }
 
 @media screen and (min-width: 769px) {
+    nav .sub-menu {
+        width: 100%;
+        line-height: 45px;
+        border-left: #ffbb33 solid 1px;
+        border-right: #ffbb33 solid 1px;
+    }
+
+    nav .sub-menu:hover .subject {
+        display: flex;
+    }
+
     nav .sub-menu .subject div div:hover {
         border: #ff9900 solid 2px;
         animation: border-tranform 0.2s;
@@ -216,6 +207,23 @@ nav .sub-menu .subject .subject-column1 div a,
     
     nav .sub-menu .subject div div:hover a {
         color: #ff9900;
+    }
+
+    nav .sub-menu .subject {
+        padding-left: 5px;
+        padding-top: 15px;
+        margin-left: -1px;
+    }
+
+    nav .sub-menu:nth-child(10):hover .subject, 
+    nav .sub-menu:nth-child(11):hover .subject, 
+    nav .sub-menu:nth-child(12):hover .subject,
+    nav .sub-menu:last-child:hover .subject {
+        margin-left: -227px;
+    }
+
+    nav .sub-menu .subject .subject-column1 div:last-child {
+        margin-bottom: 15px;
     }
 }
 
@@ -548,9 +556,8 @@ footer .copyright {
 @media screen and (max-width: 768px) {
     .layer_opacity {
         margin-top: 0;
-        width: 0;
-        transition: 0.6s ease-in;
-        transition: 0.1s ease-out;
+        margin-left: -100%;
+        transition: 0.4s ease-in-out;
     }
 
     header {
@@ -570,18 +577,16 @@ footer .copyright {
         background: #df9f20;
         display: block;
         color: #ffffff;
-        width: 15%;
-        height: 35px;
         margin-left: 3%;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 3px;
+        padding: 10px;
     }
 
     .mobile-header .search-container {
         display: block;
-        height: 35px;
         width: 80%;
         padding: 4px 6%;
         position: relative;
@@ -589,12 +594,12 @@ footer .copyright {
 
     .mobile-header .search-container input {
         color: #666666;
-        height: 31px;
         width: 100%;
         border: none;
-        padding-left: 10px;
         border-radius: 5px;
         outline: none;
+        padding: 10px 6%;
+        box-sizing: border-box;
     }
 
     .mobile-header .search-container .icon {
@@ -605,24 +610,23 @@ footer .copyright {
     }
 
     nav {
-        width: 0%;
+        width: 70%;
         position: fixed;
         z-index: 2;
         top: 0;
-        transition: 0.5s ease-in-out;
+        transition: 0.4s ease-in-out;
         height: 100%;
-        overflow-y: scroll
-    }
-
-    nav .nav-mobile-container {
-        display: none;
+        overflow-y: scroll;
+        margin-left: -70%;
     }
 
     nav .logo {
         background: #ffffff;
         padding: 10px 5%;
+        padding-top: 15px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     nav .logo a {
@@ -650,16 +654,17 @@ footer .copyright {
 
     nav .container {
         flex-direction: column;
-        width: 90%;
         margin-left: 0;
     }
 
     nav .sub-menu {
         text-align: start;
-        border: none;
-        padding: 5px 5%;
-        display: flex;
+        /* display: flex; */
         justify-content: space-between;
+    }
+
+    nav .sub-menu a, nav .sub-menu i {
+        margin: 10px 5%;
     }
 
     nav .sub-menu:nth-child(2),
@@ -676,27 +681,33 @@ footer .copyright {
         margin-left: 0;
     }
 
-    nav .sub-menu a {
-        font-size: 17px;
+    nav .sub-menu .sub-title {
+        display: flex;
+        justify-content: space-between;
     }
 
-    nav .sub-menu .icon-down {
-        display: block;
+    nav .sub-menu .sub-title a {
+        font-size: 15px;
+    }
+
+    nav .sub-menu .sub-title .icon-down {
         color: #ffffff;
-        font-size: 140%;
-        background: #df9f20;
-        width: 15%;
-        text-align: center;
+        font-size: 100%;
+        align-items: center;
+        transition: 0.5s ease-in-out;
+    }
+
+    nav .sub-menu .icon-plus {
+        display: flex;
     }
 
     nav .container .sub-menu .subject {
         flex-direction: column;
         background: #26af92;
         box-shadow: none;
-        width: 102%;
-        margin-left: -12px;
-        margin-top: 51px;
+        width: 100%;
         padding: 0;
+        margin-top: 39px;
     }
 
     nav .container .sub-menu .subject div div {
@@ -704,22 +715,37 @@ footer .copyright {
         width: 100%;
         margin: 0 auto;
         border-radius: 0;
-        border-bottom: #2bb69c solid 1px;
-        padding: 5px 0;
-    }
-
-    nav .container .sub-menu:hover .subject {
-        display: flex;
+        border-bottom: #36b69a solid 0.1px;
+        padding: 2px 0;
     }
 
     nav .container .sub-menu .subject div div a {
         color: #ffffff;
-        font-size: 14px;
+        font-size: 13px;
         margin-left: 8%;
     }
 
     nav .container .sub-menu .subject .subject-column3 {
         display: none;
+    }
+
+    .menu-active {
+        display: block !important;
+    }
+
+    .menu-active .subject {
+        margin-top: 0 !important;
+        display: flex !important;
+        position: static !important;
+        transition: 0.3s ease-in-out;
+    }
+
+    .menu-active .icon-plus {
+        display: none !important;
+    }
+
+    .menu-active .icon-minus {
+        display: flex !important;
     }
 
     #banner-hp {

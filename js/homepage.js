@@ -29,40 +29,43 @@ searchField.onblur = function () {
 // Mobile: Menu CanVas
 var menuButton = document.getElementById("icon-nav");
 let navTag = document.getElementsByTagName("nav")[0];
-var navMobileContainer = document.getElementsByClassName("nav-mobile-container")[0];
 var closeButton = document.getElementsByClassName("close-nav-mobile")[0];
 
-menuButton.onclick = function() {
-    navTag.style.width = "70%";
-    setTimeout(function(){
-        navMobileContainer.style.display = "block";
-        layerOpacity.style.width = "100%";
-    }, 200);
+if (window.outerWidth <= 768) {
     layerOpacity.style.height = document.getElementsByTagName('body')[0].clientHeight + "px";
 }
 
-closeButton.onclick = function() {
-    navMobileContainer.style.display = "none";
-    navTag.style.width = "0%";
-    layerOpacity.style.width = "0";
-    setTimeout(function(){
-        layerOpacity.style.height = "0px";
-    }, 200);
+menuButton.onclick = function() {
+    navTag.style.marginLeft = "0";
+    layerOpacity.style.marginLeft = "0";
 }
 
+closeButton.onclick = function() {
+    navTag.style.marginLeft = `-${0.7 * document.getElementsByTagName('body')[0].clientWidth}px`;
+    layerOpacity.style.marginLeft = "-100%";
+}
 
-// Mobile: Menu Accordion (TESTING)
-// var iconDown = document.getElementsByClassName("icon-down");
-// var subject = document.getElementsByClassName("subject");
+// Mobile: Menu Accordion
+var subject = document.getElementsByClassName("subject");
+var iconPlus = document.getElementsByClassName("icon-plus");
+var iconMinus = document.getElementsByClassName("icon-minus");
 
-// for (let i = 0; i < iconDown.length; i++) {
-//     iconDown[i].addEventListener = function() {
-//         if (window.outerWidth <= 768) {
-//             if (subject[i].style.display = "none") {
-//                 subject[i].style.display = "flex";
-//             } else {
-//                 subject[i].style.display = "none";
-//             }
-//         }
-//     }
-// }
+for (let i = 0; i < subMenu.length; i++) {
+    subMenu[i].addEventListener("click", function() {
+        var current = subMenu[i];
+        var list_menu_active = document.getElementsByClassName('menu-active');
+        if (list_menu_active.length) {
+            for (let i = 0; i < list_menu_active.length; i++) {
+                if (current == list_menu_active[i]) { continue };
+                list_menu_active[i].classList.remove('menu-active');
+            }
+        }
+        
+        if(current.classList.contains('menu-active')){
+           current.classList.remove('menu-active'); 
+        }
+        else {
+            current.classList.add('menu-active');
+        }
+    })
+}
