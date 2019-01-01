@@ -38,11 +38,13 @@ if (window.outerWidth <= 768) {
 menuButton.onclick = function() {
     navTag.style.marginLeft = "0";
     layerOpacity.style.marginLeft = "0";
+    document.getElementsByTagName('body')[0].style.overflow = "hidden";
 }
 
 closeButton.onclick = function() {
     navTag.style.marginLeft = `-${0.7 * document.getElementsByTagName('body')[0].clientWidth}px`;
     layerOpacity.style.marginLeft = "-100%";
+    document.getElementsByTagName('body')[0].style.overflow = "unset";
 }
 
 // Mobile: Menu Accordion
@@ -68,4 +70,20 @@ for (let i = 0; i < subMenu.length; i++) {
             current.classList.add('menu-active');
         }
     })
+}
+
+// Scroll to Top
+var scrollTopButton = document.getElementById("scroll-top");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollTopButton.style.display = "block";
+    } else {
+        scrollTopButton.style.display = "none";
+    }
+};
+
+scrollTopButton.onclick = function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera  
 }
