@@ -356,11 +356,12 @@ nav .sub-menu .subject .subject-column1 div a,
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 5px 0.5px #ff9900;
 }
 
 .post-model:hover {
     transform: translateZ(3px);
-    box-shadow: 0 0 5px 0.5px #ff9900;
+    box-shadow: 0 0 5px 0.5px #26af92;
     cursor: pointer;
 }
 
