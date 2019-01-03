@@ -26,8 +26,10 @@ Thực hiện bởi [Nguyễn Đình Tiến](https://github.com/dinhtien12298)
 
 [Detail](https://dinhtien12298.github.io/web2018/images/layout/detail.png)
 
-[Lop9](https://dinhtien12298.github.io/web2018/images/layout/lop9.png)
+[Category](https://dinhtien12298.github.io/web2018/images/layout/lop9.png)
 
 ## Yêu cầu 3: Giao diện trang chủ
 
 [Homepage](https://dinhtien12298.github.io/web2018/homepage.html)
+
+[Category](https://dinhtien12298.github.io/web2018/category.html)
