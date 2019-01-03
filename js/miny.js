@@ -74,6 +74,7 @@ for (let i = 0; i < subMenu.length; i++) {
 
 // Scroll to Top
 var scrollTopButton = document.getElementById("scroll-top");
+var html = document.documentElement;
 
 window.onscroll = function() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -84,15 +85,37 @@ window.onscroll = function() {
 };
 
 scrollTopButton.onclick = function() {
-    scrollToTop(200); 
+    scrollToTop(200, 3);
 }
 
-function scrollToTop(scrollDuration) {
-    var scrollStep = -window.scrollY / (scrollDuration / 15),
-        scrollInterval = setInterval(function(){
-        if ( window.scrollY != 0 ) {
-            window.scrollBy( 0, scrollStep );
+// function scrollToTop(scrollDuration) {
+//     var scrollStep = -window.scrollY / (scrollDuration / 15),
+//         scrollInterval = setInterval(function(){
+//         if ( window.scrollY != 0 ) {
+//             window.scrollBy( 0, scrollStep );
+//         }
+//         else clearInterval(scrollInterval); 
+//     },15);
+// }
+
+function scrollToTop(totalTime, easingPower) {
+    var timeLeft = totalTime;
+    var scrollByPixel = setInterval(function () {
+        var percentSpent = (totalTime - timeLeft) / totalTime;
+        if (timeLeft >= 0) {
+            var newScrollTop = html.scrollTop * (1 - easeInOut(percentSpent, easingPower));
+            html.scrollTop = newScrollTop;
+            timeLeft--;
+        } else {
+            clearInterval(scrollByPixel);
         }
-        else clearInterval(scrollInterval); 
-    },15);
+    }, 1);
+}
+
+function easeInOut(time, power) {
+    if (time < 0.5) {
+        return 0.5 * Math.pow(2 * time, power);
+    } else {
+        return 0.5 * (2 - Math.pow(2 * (1 - time), power));
+    }
 }
