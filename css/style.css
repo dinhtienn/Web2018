@@ -47,7 +47,7 @@
     border-radius: 30px;
     font-size: 18px;
     /* box-shadow: 0 0 10px 0.5px #444444; */
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 
 #scroll-top i {
