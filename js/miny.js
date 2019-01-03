@@ -84,6 +84,15 @@ window.onscroll = function() {
 };
 
 scrollTopButton.onclick = function() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera  
+    scrollToTop(200); 
+}
+
+function scrollToTop(scrollDuration) {
+    var scrollStep = -window.scrollY / (scrollDuration / 15),
+        scrollInterval = setInterval(function(){
+        if ( window.scrollY != 0 ) {
+            window.scrollBy( 0, scrollStep );
+        }
+        else clearInterval(scrollInterval); 
+    },15);
 }
