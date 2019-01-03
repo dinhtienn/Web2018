@@ -113,7 +113,7 @@ viewMoreButton.onclick = function() {
 
 axios({
     method: 'GET',
-    url: '../post.json',
+    url: 'https://dinhtien12298.github.io/web2018/post.json',
 }).then((data) => {
 
     console.log("aaaa" ,data);
