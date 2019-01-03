@@ -110,3 +110,10 @@ viewMoreButton.onclick = function() {
         }
     }, 1300);
 }
+
+axios({
+    method: 'GET',
+    url: '../post.json',
+}).then(({ data }) => {
+    console.log(data);
+});
