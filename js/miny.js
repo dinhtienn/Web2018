@@ -88,16 +88,6 @@ scrollTopButton.onclick = function() {
     scrollToTop(200, 3);
 }
 
-// function scrollToTop(scrollDuration) {
-//     var scrollStep = -window.scrollY / (scrollDuration / 15),
-//         scrollInterval = setInterval(function(){
-//         if ( window.scrollY != 0 ) {
-//             window.scrollBy( 0, scrollStep );
-//         }
-//         else clearInterval(scrollInterval); 
-//     },15);
-// }
-
 function scrollToTop(totalTime, easingPower) {
     var timeLeft = totalTime;
     var scrollByPixel = setInterval(function () {
