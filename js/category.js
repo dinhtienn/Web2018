@@ -114,6 +114,7 @@ viewMoreButton.onclick = function() {
 axios({
     method: 'GET',
     url: '../post.json',
-}).then(({ data }) => {
-    console.log(data);
+}).then((data) => {
+
+    console.log("aaaa" ,data);
 });
