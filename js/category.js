@@ -91,30 +91,50 @@ function scrollToTop(totalTime, easingPower) {
 }
 
 // ViewMore
-var viewMoreButton = document.getElementsByClassName("view-more")[0];
+var viewMoreButton = document.getElementsByClassName("view-more");
 var post = document.getElementsByClassName('post-model');
-var otherSubject = document.getElementsByClassName('subject2')[0];
+var showPost = document.getElementsByClassName('tab-post');
+var hiddenSubject = document.getElementsByClassName('list-post');
 var loading = document.getElementsByClassName('loading')[0];
 var pageButton = document.getElementsByClassName('page-button')[0];
 
-viewMoreButton.onclick = function() {
-    viewMoreButton.style.display = 'none';
-    otherSubject.style.display = 'none';
-    post[3].style.opacity = '1.0';
-    loading.style.display = 'block';
-    setTimeout(function() {
-        for (i = 4; i <= 8; i++) {
+for (let i = 0; i <= 1; i++) {
+    viewMoreButton[i].onclick = function() {
+        viewMoreButton[i].style.display = 'none';
+        hiddenSubject[1-i].style.display = 'none';
+        post[3].style.opacity = '1.0';
+        loading.style.display = 'block';
+    
+        setTimeout(function() {
             loading.style.display = 'none';
-            post[i].style.display = 'flex';
             pageButton.style.display = 'block';
-        }
-    }, 1300);
+            axios({
+                method: 'GET',
+                url: 'https://dinhtien12298.github.io/web2018/post.json',
+            }).then((data) => {
+                const posts = data.data;
+                const postHTML = posts.map(
+                    post => 
+                `    <div class="post-model">
+                        <div class="post-title">
+                            <a href="" class="f-medium-17">${post.title}</a>
+                        </div>
+                        <div class="post-heading d-flex">
+                            <div class="post-author f-medium-12">
+                                ${post.author}
+                            </div>
+                            <div class="post-info f-regular-13">
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">${post.view}</div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">${post.like}</div>
+                            </div>
+                        </div>
+                        <div class="post-content f-regular-13">
+                            ${post.content}
+                        </div>
+                    </div>`
+                );
+                showPost[i].innerHTML += `${postHTML.join("")}`;
+            });
+        }, 1300);
+    }
 }
-
-axios({
-    method: 'GET',
-    url: 'https://dinhtien12298.github.io/web2018/post.json',
-}).then((data) => {
-
-    console.log("aaaa" ,data);
-});

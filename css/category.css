@@ -386,11 +386,6 @@ nav .sub-menu .subject .subject-column1 div a,
     opacity: 0.5;
 }
 
-.post-model:nth-child(5), .post-model:nth-child(6), .post-model:nth-child(7), 
-.post-model:nth-child(8), .post-model:nth-child(9) {
-    display: none;
-}
-
 .post-model:hover {
     transform: translateZ(3px);
     box-shadow: 0 0 5px 0.5px #ff9900;
