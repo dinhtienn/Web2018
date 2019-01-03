@@ -40,7 +40,7 @@
     z-index: 1;
     border: none; 
     outline: none; 
-    background: #ff9900;
+    background: rgba(254, 156, 26, 0.3);
     color: white;
     cursor: pointer;
     padding: 15px 20px;
@@ -51,11 +51,11 @@
 }
 
 #scroll-top i {
-    font-size: 130%;
+    font-size: 150%;
 }
 
 #scroll-top:hover {
-    background: #ffaa00;
+    background: #ff9900;
 }
 
 /* Header */
@@ -506,13 +506,22 @@ footer .copyright {
 
 #banner .breadcrumb {
     display: flex;
+    padding-top: 10px;
 }
 
-#breadcrumb .breadcrumb div+div:before {
-  padding: 8px;
-  color: black;
-  content: "/\00a0";
-}
+/* #breadcrumb .breadcrumb div:before {
+    display: block;
+    color: #ffffff;
+    content: "\u8260";
+} */
+
+/* .line-orange:before {
+    content: "";
+    display: block;
+    width: 45px;
+    border-bottom: #ff9900 solid 3px;
+    margin-top: -3px;
+} */
 
 #banner .breadcrumb div {
     color: #ffffff;
@@ -526,6 +535,7 @@ footer .copyright {
 #banner .banner-heading {
     text-align: center;
     color: #ffffff;
+    padding-top: 10px;
 }
 
 #banner .breadcrumb div a:hover {
