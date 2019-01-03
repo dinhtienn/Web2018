@@ -85,7 +85,7 @@ window.onscroll = function() {
 };
 
 scrollTopButton.onclick = function() {
-    scrollToTop(200, 3);
+    scrollToTop(150, 4);
 }
 
 function scrollToTop(totalTime, easingPower) {
@@ -93,19 +93,11 @@ function scrollToTop(totalTime, easingPower) {
     var scrollByPixel = setInterval(function () {
         var percentSpent = (totalTime - timeLeft) / totalTime;
         if (timeLeft >= 0) {
-            var newScrollTop = html.scrollTop * (1 - easeInOut(percentSpent, easingPower));
+            var newScrollTop = html.scrollTop * (1 - Math.pow(percentSpent, easingPower));
             html.scrollTop = newScrollTop;
             timeLeft--;
         } else {
             clearInterval(scrollByPixel);
         }
     }, 1);
-}
-
-function easeInOut(time, power) {
-    if (time < 0.5) {
-        return 0.5 * Math.pow(2 * time, power);
-    } else {
-        return 0.5 * (2 - Math.pow(2 * (1 - time), power));
-    }
 }
