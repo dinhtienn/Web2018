@@ -684,7 +684,7 @@ footer .copyright {
         padding: 10px 15px;
     }
 
-    header, .side-bar {
+    header, .side-bar img {
         display: none;
     }
 
@@ -953,6 +953,8 @@ footer .copyright {
 
     .post-detail .fb-comments {
         padding: 10px 2% !important;
+        display: inline-block;
+        z-index: 0;
     }
 
     /* Side Bar */
