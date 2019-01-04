@@ -586,6 +586,10 @@ footer .copyright {
     header {
         display: none;
     }
+
+    .fake-box {
+        height: 52px;
+    }
     
     .mobile-header {
         background: #ff9900;

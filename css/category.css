@@ -309,7 +309,7 @@ nav .sub-menu .subject .subject-column1 div a,
 
 .content-post {
     width: 73.5%;
-    padding-right: 2%;
+    padding-right: 3%;
 }
 
 .subject1, .subject2 {
@@ -416,7 +416,6 @@ nav .sub-menu .subject .subject-column1 div a,
 .post-model .post-heading .post-info {
     width: 50%;
     display: flex;
-    text-align: end;
 }
 
 .post-model .post-heading .post-info div {
@@ -691,6 +690,10 @@ footer .copyright {
     header, .side-bar {
         display: none;
     }
+
+    .fake-box {
+        height: 52px;
+    }
     
     .mobile-header {
         background: #ff9900;
@@ -878,18 +881,19 @@ footer .copyright {
     }
 
     #banner {
-        height: 40px;
+        background-image: url('../images/all/banner-mobile.png');
+        height: 60px;
     }
 
     #banner .breadcrumb {
-        padding-top: 3px;
+        padding-top: 5px;
         padding-left: 3%;
-        font-size: 11px;
+        font-size: 12px;
     }
 
     #banner .banner-heading {
-        padding-top: 3px;
-        font-size: 15px;
+        padding-top: 13px;
+        font-size: 17px;
     }
 
     .f-regular-30 {
@@ -900,6 +904,10 @@ footer .copyright {
     .f-medium-17 {
         font-family: Roboto-Regular;
         font-size: 16px;
+    }
+
+    .content {
+        padding-top: 30px;
     }
 
     .content-post {

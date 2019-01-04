@@ -60,12 +60,6 @@ for (let i = 0; i < subMenu.length; i++) {
     })
 }
 
-// Mobile fakeBox
-var fakeBox = document.getElementsByClassName('fake-box')[0];
-if (window.outerWidth <= 768) {
-    fakeBox.style.height = `${document.getElementsByClassName('mobile-header')[0].clientHeight}px`;
-}
-
 // Scroll to Top
 var scrollTopButton = document.getElementById("scroll-top");
 var html = document.documentElement;

@@ -60,13 +60,6 @@ for (let i = 0; i < subMenu.length; i++) {
     })
 }
 
-// Mobile fakeBox
-var fakeBox = document.getElementsByClassName('fake-box')[0];
-if (window.outerWidth <= 768) {
-    fakeBox.style.height = `${document.getElementsByClassName('mobile-header')[0].clientHeight - 1}px`
-}
-
-
 // Scroll to Top
 var scrollTopButton = document.getElementById("scroll-top");
 var html = document.documentElement;
@@ -114,8 +107,6 @@ for (let i = 0; i <= 1; i++) {
         loading.style.display = 'block';
     
         setTimeout(function() {
-            loading.style.display = 'none';
-            pageButton.style.display = 'block';
             axios({
                 method: 'GET',
                 url: 'https://dinhtien12298.github.io/web2018/post.json',
@@ -143,6 +134,8 @@ for (let i = 0; i <= 1; i++) {
                 );
                 showPost[i].innerHTML += `${postHTML.join("")}`;
             });
+            loading.style.display = 'none';
+            pageButton.style.display = 'block';
         }, 1300);
     }
 }
