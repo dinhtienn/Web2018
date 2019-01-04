@@ -35,3 +35,6 @@ Thực hiện bởi [Nguyễn Đình Tiến](https://github.com/dinhtien12298)
 ## Yêu cầu 4: Giao diện Category và Chi tiết
 
 [Category](https://dinhtien12298.github.io/web2018/category.html)
+
+[Category](https://dinhtien12298.github.io/web2018/detail.html)
+
