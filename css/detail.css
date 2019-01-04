@@ -684,7 +684,7 @@ footer .copyright {
         padding: 10px 15px;
     }
 
-    header, .side-bar img {
+    header, .side-bar {
         display: none;
     }
 
@@ -951,9 +951,9 @@ footer .copyright {
         font-size: 16px;
     }
 
-    /* .post-detail .fb-comments {
+    .post-detail .fb-comments {
         padding: 10px 2% !important;
-    } */
+    }
 
     /* Side Bar */
     .side-bar {
