@@ -369,15 +369,12 @@ nav .sub-menu .subject .subject-column1 div a,
 
 .post-detail .fb-comments {
     background: #ffffff;
-    padding: 30px 0 !important;
+    padding: 20px 0 !important;
+    width: 96%;
 }
 
 .post-detail .fb-comments span iframe {
     width: 100% !important;
-}
-
-.post-detail .fb-comments span iframe #document html body {
-    padding: 0 2% !important;
 }
 
 /* Side Bar */
