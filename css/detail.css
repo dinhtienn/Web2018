@@ -376,7 +376,7 @@ nav .sub-menu .subject .subject-column1 div a,
     width: 100% !important;
 }
 
-.post-detail .fb-comments span iframe html body ._li .pluginSkinLight div ._56q9 ._2pi8 {
+.post-detail .fb-comments span iframe #document html body {
     padding: 0 2% !important;
 }
 
