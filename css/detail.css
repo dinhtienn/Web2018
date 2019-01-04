@@ -367,6 +367,14 @@ nav .sub-menu .subject .subject-column1 div a,
     color: #333333;
 }
 
+.post-detail .fb-comments {
+    background: #ffffff;
+}
+
+.post-detail .fb-comments iframe {
+    width: 100%;
+}
+
 /* Side Bar */
 .side-bar {
     width: 26.5%;
