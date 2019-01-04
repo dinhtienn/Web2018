@@ -594,6 +594,7 @@ footer .copyright {
         justify-content: space-around;
         align-items: center;
         padding: 5px 0;
+        position: fixed;
     }
 
     .mobile-header #icon-nav {

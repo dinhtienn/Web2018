@@ -699,6 +699,8 @@ footer .copyright {
         justify-content: space-around;
         align-items: center;
         padding: 5px 0;
+        position: fixed;
+        z-index: 1;
     }
 
     .mobile-header #icon-nav {
@@ -907,6 +909,10 @@ footer .copyright {
 
     .content .container {
         padding: 0 2%;
+    }
+
+    .post-model .post-heading .post-info div:first-child {
+        margin-right: -55%;
     }
 
     footer .menu {

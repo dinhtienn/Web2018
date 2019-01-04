@@ -60,6 +60,13 @@ for (let i = 0; i < subMenu.length; i++) {
     })
 }
 
+// Mobile fakeBox
+var fakeBox = document.getElementsByClassName('fake-box')[0];
+if (window.outerWidth <= 768) {
+    fakeBox.style.height = `${document.getElementsByClassName('mobile-header')[0].clientHeight - 1}px`
+}
+
+
 // Scroll to Top
 var scrollTopButton = document.getElementById("scroll-top");
 var html = document.documentElement;
@@ -103,6 +110,7 @@ for (let i = 0; i <= 1; i++) {
         viewMoreButton[i].style.display = 'none';
         hiddenSubject[1-i].style.display = 'none';
         post[3].style.opacity = '1.0';
+        post[7].style.opacity = '1.0';
         loading.style.display = 'block';
     
         setTimeout(function() {
