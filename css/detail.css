@@ -371,6 +371,7 @@ nav .sub-menu .subject .subject-column1 div a,
     background: #ffffff;
     padding: 20px 2% !important;
     width: 96%;
+    margin-bottom: 20px;
 }
 
 .post-detail .fb-comments span iframe {
