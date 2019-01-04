@@ -64,6 +64,7 @@ for (let i = 0; i < subMenu.length; i++) {
 // Scroll to Top
 var scrollTopButton = document.getElementById("scroll-top");
 var html = document.documentElement;
+var body = document.body;
 
 window.onscroll = function() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -79,11 +80,12 @@ scrollTopButton.onclick = function() {
 
 function scrollToTop(totalTime, easingPower) {
     var timeLeft = totalTime;
+    var scrollTop = body.scrollTop || html.scrollTop;
     var scrollByPixel = setInterval(function () {
         var percentSpent = (totalTime - timeLeft) / totalTime;
         if (timeLeft >= 0) {
-            var newScrollTop = html.scrollTop * (1 - Math.pow(percentSpent, easingPower));
-            html.scrollTop = newScrollTop;
+            var newScrollTop = scrollTop * (1 - Math.pow(percentSpent, easingPower));
+            scrollTop = newScrollTop;
             timeLeft--;
         } else {
             clearInterval(scrollByPixel);
