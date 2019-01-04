@@ -684,7 +684,7 @@ footer .copyright {
         padding: 10px 15px;
     }
 
-    header, .side-bar {
+    header, .side-bar img {
         display: none;
     }
 
@@ -692,6 +692,7 @@ footer .copyright {
         height: 52px;
     }
     
+    /* Mobile Header */
     .mobile-header {
         background: #ff9900;
         width: 100%;
@@ -739,6 +740,7 @@ footer .copyright {
         color: #7088a9;
     }
 
+    /* NavBar Mobile */
     nav {
         width: 70%;
         position: fixed;
@@ -877,20 +879,27 @@ footer .copyright {
         display: flex !important;
     }
 
+    /* Banner */
     #banner {
         background-image: url('../images/all/banner-mobile.png');
-        height: 60px;
+        height: 99px;
     }
 
     #banner .breadcrumb {
-        padding-top: 5px;
+        padding-top: 7px;
         padding-left: 3%;
-        font-size: 12px;
+        padding-right: 3%;
+        font-size: 11px;
     }
 
     #banner .banner-heading {
-        padding-top: 13px;
-        font-size: 17px;
+        padding-top: 30px;
+        font-size: 20px;
+    }
+
+    /* Content */
+    .main-content {
+        display: block;
     }
 
     .f-regular-30 {
@@ -904,22 +913,78 @@ footer .copyright {
     }
 
     .content {
-        padding-top: 30px;
+        padding: 20px 3%;
     }
 
-    .content-post {
+    .post-model {
+        margin: 9px 1.5%;
+        padding: 10px 2%;
+        width: 95%;
+    }
+
+    .more-post .tab-heading .tab-title {
+        font-size: 23px;
+        margin-top: 7px;
+    }
+
+    .more-post .tab-post .post-model:nth-child(4), 
+    .more-post .tab-post .post-model:nth-child(5),
+    .more-post .tab-post .post-model:nth-child(6) {
+        display:none;
+    }
+
+    .post-detail {
         width: 100%;
         padding-right: 0;
     }
 
-    .content .container {
-        padding: 0 2%;
+    .post-detail .post-main .post-heading .post-info div:first-child {
+        margin-right: -50%;
     }
 
     .post-model .post-heading .post-info div:first-child {
         margin-right: -55%;
     }
 
+    .post-detail .post-content {
+        font-size: 16px;
+    }
+
+    /* Side Bar */
+    .side-bar {
+        width: 100%;
+    }
+
+    .side-bar .related {
+        padding: 10px 2%;
+        margin-bottom: 0;
+    }
+
+    .side-bar .related .related-heading {
+        padding-bottom: 10px;
+        padding-top: 0;
+    }
+
+    .side-bar .related .line-orange:before {
+        margin-bottom: 15px;
+    }
+
+    .side-bar .related .related-content a {
+        margin-bottom: 10px;
+    }
+
+    /* More Post */
+    .tab-heading {
+        width: 99.5%;
+        padding-right: 1px;
+        margin-left: 0.5%;
+    }
+    
+    .line-orange:before {
+        margin-left: 0.5%;
+    }
+
+    /* Footer */
     footer .menu {
         display: none;
     }

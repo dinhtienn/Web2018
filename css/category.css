@@ -416,6 +416,7 @@ nav .sub-menu .subject .subject-column1 div a,
 .post-model .post-heading .post-info {
     width: 50%;
     display: flex;
+    text-align: end;
 }
 
 .post-model .post-heading .post-info div {
@@ -882,18 +883,19 @@ footer .copyright {
 
     #banner {
         background-image: url('../images/all/banner-mobile.png');
-        height: 60px;
+        height: 99px;
     }
 
     #banner .breadcrumb {
-        padding-top: 5px;
+        padding-top: 7px;
         padding-left: 3%;
-        font-size: 12px;
+        padding-right: 3%;
+        font-size: 11px;
     }
 
     #banner .banner-heading {
-        padding-top: 13px;
-        font-size: 17px;
+        padding-top: 30px;
+        font-size: 20px;
     }
 
     .f-regular-30 {
