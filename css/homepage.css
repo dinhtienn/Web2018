@@ -599,6 +599,7 @@ footer .copyright {
         align-items: center;
         padding: 5px 0;
         position: fixed;
+        z-index: 1;
     }
 
     .mobile-header #icon-nav {
