@@ -19,20 +19,22 @@ var menuButton = document.getElementById("icon-nav");
 let navTag = document.getElementsByTagName("nav")[0];
 var closeButton = document.getElementsByClassName("close-nav-mobile")[0];
 
-if (window.outerWidth <= 768) {
-    layerOpacity.style.height = document.getElementsByTagName('body')[0].clientHeight + "px";
-}
-
 menuButton.onclick = function() {
-    navTag.style.marginLeft = "0";
-    layerOpacity.style.marginLeft = "0";
-    document.getElementsByTagName('body')[0].style.overflow = "hidden";
+    layerOpacity.style.height = document.getElementsByTagName('body')[0].clientHeight + "px";
+    setTimeout(function() {
+        navTag.style.marginLeft = "0";
+        layerOpacity.style.marginLeft = "0";
+        document.getElementsByTagName('body')[0].style.overflow = "hidden";
+    }, 1);
 }
 
 closeButton.onclick = function() {
     navTag.style.marginLeft = `-${0.7 * document.getElementsByTagName('body')[0].clientWidth}px`;
     layerOpacity.style.marginLeft = "-100%";
     document.getElementsByTagName('body')[0].style.overflow = "unset";
+    setTimeout(function() {
+        layerOpacity.style.height = "0";
+    }, 1000);
 }
 
 // Mobile: Menu Accordion

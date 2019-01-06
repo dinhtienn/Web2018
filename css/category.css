@@ -515,11 +515,13 @@ nav .sub-menu .subject .subject-column1 div a,
     border-radius: 50%;
     color: #999999;
     margin-right: 3px;
+    outline: none;
 }
 
 .page-button button:hover {
     background: #ff9900;
     color: #ffffff;
+    cursor: pointer;
 }
 
 @keyframes scaleUp {
@@ -682,6 +684,7 @@ footer .copyright {
         margin-top: 0;
         margin-left: -100%;
         transition: 0.4s ease-in-out;
+
     }
 
     #scroll-top {
@@ -800,6 +803,10 @@ footer .copyright {
         margin: 10px 5%;
     }
 
+    nav .sub-menu {
+        transition: 2s ease-in-out;
+    }
+
     nav .sub-menu:nth-child(2),
     nav .sub-menu:nth-child(3),
     nav .sub-menu:nth-child(4),
@@ -840,7 +847,6 @@ footer .copyright {
         box-shadow: none;
         width: 100%;
         padding: 0;
-        margin-top: 39px;
     }
 
     nav .container .sub-menu .subject div div {
@@ -936,4 +942,25 @@ footer .copyright {
     footer .copyright {
         padding: 10px 0;
     }
+}
+
+.class {
+    position: absolute;
+    display: inline-block;
+    font-size: 69px;
+    left: 50px;
+    top: 0;
+    background-image: linear-gradient(135deg, #ff9900 50%, #ffffff 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.border {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 0;
+    border-left-width: 69px;
+    border-bottom: 69px solid #ff9900;
 }

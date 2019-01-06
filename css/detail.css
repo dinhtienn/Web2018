@@ -323,11 +323,14 @@ nav .sub-menu .subject .subject-column1 div a,
     align-items: center;
 }
 
-.post-detail .post-main .post-heading .author-thumbnail {
+.post-detail .post-main .post-heading a {
+    margin-right: 2%;
+}
+
+.post-detail .post-main .post-heading a .author-thumbnail {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    margin-right: 2%;
 }
 
 .post-detail .post-main .post-heading a {
