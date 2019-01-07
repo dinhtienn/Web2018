@@ -54,7 +54,11 @@ for (let i = 0; i < subMenu.length; i++) {
         }
         
         if(current.classList.contains('menu-active')){
-           current.classList.remove('menu-active'); 
+            current.classList.add('menu-reactive');
+            setTimeout(function() {
+                current.classList.remove('menu-active');
+                current.classList.remove('menu-reactive');
+            }, 300);
         }
         else {
             current.classList.add('menu-active');

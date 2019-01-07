@@ -867,11 +867,36 @@ footer .copyright {
         display: block !important;
     }
 
+    @keyframes growUp {
+        0% {
+            height: 0px;
+        }
+
+        100% {
+            height: 374px;
+        }
+    }
+
+    @keyframes growDown {
+        0% {
+            height: 374px;
+        }
+
+        100% {
+            height: 0;
+        }
+    }
+
     .menu-active .subject {
         margin-top: 0 !important;
         display: flex !important;
         position: static !important;
         transition: 0.3s ease-in-out;
+        animation: growUp 0.5s ease-in-out;
+    }
+
+    .menu-reactive .subject {
+        animation: growDown 0.3s ease-in-out;
     }
 
     .menu-active .icon-plus {
