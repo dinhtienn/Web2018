@@ -14,11 +14,11 @@ Thực hiện bởi [Nguyễn Đình Tiến](https://github.com/dinhtien12298)
 
 ## Yêu cầu 1: Tách PSD
 
-[Fonts](https://dinhtien12298.github.io/web2018/fonts.html)
+[Fonts](https://dinhtien12298.github.io/web2018/elements/fonts.html)
 
-[Colors](https://dinhtien12298.github.io/web2018/colors.html)
+[Colors](https://dinhtien12298.github.io/web2018/elements/colors.html)
 
-[Images](https://dinhtien12298.github.io/web2018/images.html)
+[Images](https://dinhtien12298.github.io/web2018/elements/images.html)
 
 ## Yêu cầu 2: Layout
 
@@ -26,7 +26,7 @@ Thực hiện bởi [Nguyễn Đình Tiến](https://github.com/dinhtien12298)
 
 [Detail](https://dinhtien12298.github.io/web2018/images/layout/detail.png)
 
-[Category](https://dinhtien12298.github.io/web2018/images/layout/lop9.png)
+[Category](https://dinhtien12298.github.io/web2018/images/layout/category.png)
 
 ## Yêu cầu 3: Giao diện trang chủ
 
