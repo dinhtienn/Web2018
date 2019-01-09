@@ -30,11 +30,11 @@ Thực hiện bởi [Nguyễn Đình Tiến](https://github.com/dinhtien12298)
 
 ## Yêu cầu 3: Giao diện trang chủ
 
-[Homepage](https://dinhtien12298.github.io/web2018/homepage.html)
+[Homepage](https://dinhtien12298.github.io/web2018/homepage.php)
 
 ## Yêu cầu 4: Giao diện Category và Detail
 
-[Category](https://dinhtien12298.github.io/web2018/category.html)
+[Category](https://dinhtien12298.github.io/web2018/category.php)
 
-[Detail](https://dinhtien12298.github.io/web2018/detail.html)
+[Detail](https://dinhtien12298.github.io/web2018/detail.php)
 
