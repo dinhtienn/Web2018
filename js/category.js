@@ -129,8 +129,8 @@ for (let i = 0; i <= 1; i++) {
                                 ${post.author}
                             </div>
                             <div class="post-info f-regular-13">
-                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">${post.view}</div>
-                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">${post.like}</div>
+                                <div><img src="../images/homepage/icon-view.png" alt="icon-view">${post.view}</div>
+                                <div><img src="../images/homepage/icon-heart.png" alt="icon-like">${post.like}</div>
                             </div>
                         </div>
                         <div class="post-content f-regular-13">
