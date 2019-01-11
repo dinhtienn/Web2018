@@ -187,15 +187,21 @@ nav .sub-menu .subject {
 nav .sub-menu .subject .subject-column3 {
     display: flex;
     align-items: flex-end;
+    margin-left: -50px;
+}
+
+nav .sub-menu .subject .subject-column1,
+nav .sub-menu .subject .subject-column2 {
+    padding-bottom: 50px;
 }
 
 nav .sub-menu .subject .subject-column1 div,
 .sub-menu .subject .subject-column2 div {
-    width: 100px;
+    width: 120px;
     line-height: 30px;
     border: #ffffff solid 2px;
     border-radius: 20px;
-    margin: 10px;
+    margin: 5px 10px;
     text-align: start;
     padding-left: 10%;
     box-sizing: border-box;
@@ -246,15 +252,11 @@ nav .sub-menu .subject .subject-column1 div a,
         margin-left: -1px;
     }
 
-    nav .sub-menu:nth-child(10):hover .subject, 
-    nav .sub-menu:nth-child(11):hover .subject, 
-    nav .sub-menu:nth-child(12):hover .subject,
-    nav .sub-menu:last-child:hover .subject {
-        margin-left: -219px;
-    }
-
-    nav .sub-menu .subject .subject-column1 div:last-child {
-        margin-bottom: 15px;
+    nav .sub-menu:nth-child(9):hover .subject,
+    nav .sub-menu:nth-child(10):hover .subject,
+    nav .sub-menu:nth-child(11):hover .subject,
+    nav .sub-menu:nth-child(12):hover .subject {
+        margin-left: -222%;
     }
 }
 
@@ -312,7 +314,7 @@ nav .sub-menu .subject .subject-column1 div a,
     padding-right: 3%;
 }
 
-.subject1, .subject2 {
+.content-post .list-post {
     margin-bottom: 25px;
 }
 

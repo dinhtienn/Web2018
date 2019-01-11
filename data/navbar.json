@@ -1,0 +1,86 @@
+[
+    {
+        "class": "Lớp 12",
+        "subject": [
+            "Toán học", "Văn học", "Tiếng Anh", "Lịch sử", "Địa lý", "Vật lý",
+            "Sinh học", "Soạn văn", "Văn mẫu", "Tiếng Việt", "Đề thi"
+        ]
+    },
+    {
+        "class": "Lớp 11",
+        "subject": [
+            "Toán học", "Văn học", "Tiếng Anh", "Lịch sử", "Địa lý", "Vật lý",
+            "Sinh học", "Soạn văn", "Văn mẫu", "Tiếng Việt", "Đề thi"
+        ]
+    },
+    {
+        "class": "Lớp 10",
+        "subject": [
+            "Toán học", "Văn học", "Tiếng Anh", "Lịch sử", "Địa lý", "Vật lý",
+            "Sinh học", "Soạn văn", "Văn mẫu", "Tiếng Việt", "Đề thi"
+        ]
+    },
+    {
+        "class": "Lớp 9",
+        "subject": [
+            "Toán học", "Văn học", "Tiếng Anh", "Lịch sử", "Địa lý", "Vật lý",
+            "Sinh học", "Soạn văn", "Văn mẫu", "Tiếng Việt", "Đề thi"
+        ]
+    },
+    {
+        "class": "Lớp 8",
+        "subject": [
+            "Toán học", "Văn học", "Tiếng Anh", "Lịch sử", "Địa lý", "Vật lý",
+            "Sinh học", "Soạn văn", "Văn mẫu", "Tiếng Việt", "Đề thi"
+        ]
+    },
+    {
+        "class": "Lớp 7",
+        "subject": [
+            "Toán học", "Văn học", "Tiếng Anh", "Lịch sử", "Địa lý", "Vật lý",
+            "Sinh học", "Soạn văn", "Văn mẫu", "Tiếng Việt", "Đề thi"
+        ]
+    },
+    {
+        "class": "Lớp 6",
+        "subject": [
+            "Toán học", "Văn học", "Tiếng Anh", "Lịch sử", "Địa lý", "Vật lý",
+            "Sinh học", "Soạn văn", "Văn mẫu", "Tiếng Việt", "Đề thi"
+        ]
+    },
+    {
+        "class": "Lớp 5",
+        "subject": [
+            "Toán học", "Văn học", "Tiếng Anh", "Lịch sử", "Địa lý", "Vật lý",
+            "Sinh học", "Soạn văn", "Văn mẫu", "Tiếng Việt", "Đề thi"
+        ]
+    },
+    {
+        "class": "Lớp 4",
+        "subject": [
+            "Toán học", "Văn học", "Tiếng Anh", "Lịch sử", "Địa lý", "Vật lý",
+            "Sinh học", "Soạn văn", "Văn mẫu", "Tiếng Việt", "Đề thi"
+        ]
+    },
+    {
+        "class": "Lớp 3",
+        "subject": [
+            "Toán học", "Văn học", "Tiếng Anh", "Lịch sử", "Địa lý", "Vật lý",
+            "Sinh học", "Soạn văn", "Văn mẫu", "Tiếng Việt", "Đề thi"
+        ]
+    },
+    {
+        "class": "Lớp 2",
+        "subject": [
+            "Toán học", "Văn học", "Tiếng Anh", "Lịch sử", "Địa lý", "Vật lý",
+            "Sinh học", "Soạn văn", "Văn mẫu", "Tiếng Việt", "Đề thi"
+        ]
+    },
+    {
+        "class": "Lớp 1",
+        "subject": [
+            "Toán học", "Văn học", "Tiếng Anh", "Lịch sử", "Địa lý", "Vật lý",
+            "Sinh học", "Soạn văn", "Văn mẫu", "Tiếng Việt", "Đề thi"
+        ]
+    }
+]

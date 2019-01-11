@@ -7,7 +7,7 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href="./css/detail.css">
     <!-- Import WebLogo -->
-    <link rel="icon" href="./images/all/logo.png">
+    <link rel="icon" href="./images/all/logo-web.png">
     <title>Miny</title>
 </head>
 <body>

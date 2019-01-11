@@ -108,17 +108,18 @@ for (let i = 0; i <= 1; i++) {
     viewMoreButton[i].onclick = function() {
         viewMoreButton[i].style.display = 'none';
         hiddenSubject[1-i].style.display = 'none';
-        post[3].style.opacity = '1.0';
-        post[7].style.opacity = '1.0';
+        post.forEach(function(eachPost) {
+            eachPost.style.opacity = '1.0';
+        });
         loading.style.display = 'block';
     
         setTimeout(function() {
             axios({
                 method: 'GET',
-                url: 'https://dinhtien12298.github.io/web2018/data/postCat.json',
+                url: 'https://dinhtien12298.github.io/web2018/data/posts.json',
             }).then((data) => {
-                const posts = data.data;
-                const postHTML = posts.map(
+                var posts = data.data;
+                var postHTML = posts.map(
                     post => 
                 `    <div class="post-model">
                         <div class="post-title">
