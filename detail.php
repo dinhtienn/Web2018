@@ -1,3 +1,32 @@
+<?php
+    $data_navbar = json_decode( file_get_contents("./data/navbar.json") );
+    $data_footer = json_decode( file_get_contents("./data/footer.json") );
+    $data_ad = json_decode( file_get_contents("./data/advertiment.json") );
+    $data_main_content = json_decode( file_get_contents("./data/postdetail.json") );
+    $data_content = json_decode( file_get_contents("./data/posts.json") );
+    $post_title = $data_main_content[0]->title;
+    $post_class = $data_main_content[0]->class;
+    $post_subject = $data_main_content[0]->subject;
+    $data_more_post = array();
+    $data_related = array();
+    foreach ($data_content as $post) {
+        if ($post->class == $post_class && $post->title != $post_title) {
+            if ($post->subject == $post_subject && sizeof($data_related) <= 8) {
+                array_push($data_related, $post);
+            }
+//            elseif (sizeof($data_more_post) <= 6) {
+//                array_push($data_more_post, $post);
+//            }
+        }
+        if ($post->class == $post_class && sizeof($data_more_post) <= 5) {
+            array_push($data_more_post, $post);
+        }
+        if (sizeof($data_more_post) > 6 && sizeof($data_related) > 8) {
+            break;
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,330 +87,33 @@
                 <p>Danh mục</p>
             </div>
             <div class="container d-flex f-medium-15">
-                <div class="sub-menu">
-                    <div class="sub-title">
-                        <a href="">Lớp 12</a>
-                        <i class="icon-down icon-plus d-none fas fa-plus"></i>
-                        <i class="icon-down icon-minus d-none fas fa-minus"></i>
+                <?php foreach($data_navbar as $menu_item) { ?>
+                    <div class="sub-menu">
+                        <div class="sub-title">
+                            <a href=""><?php echo "$menu_item->class"; ?></a>
+                            <i class="icon-down icon-plus d-none fas fa-plus"></i>
+                            <i class="icon-down icon-minus d-none fas fa-minus"></i>
+                        </div>
+                        <?php if ( !empty($menu_item->subject) && sizeof($menu_item->subject) != 0 ) { ?>
+                            <div class="subject f-regular-13">
+                                <div class="subject-column1">
+                                    <?php for ($i = 0; $i < sizeof($menu_item->subject) - intval(sizeof($menu_item->subject) / 2); $i++) { ?>
+                                        <div><a href=""><?php echo $menu_item->subject[$i]; ?></a></div>
+                                    <?php } ?>
+                                </div>
+                                <div class="subject-column2">
+                                    <?php for ($i = intval(sizeof($menu_item->subject) / 2) + 1; $i < sizeof($menu_item->subject); $i++) { ?>
+                                        <div><a href=\"\"><?php echo $menu_item->subject[$i]; ?></a></div>
+                                    <?php } ?>
+                                </div>
+                                <?php $class_split = explode(" ", $menu_item->class); ?>
+                                <div class="subject-column3">
+                                    <img src="./images/all/<?php echo $class_split[1]; ?>.png" alt="menu<?php echo $class_split[1]; ?>">
+                                </div>
+                            </div>
+                        <?php } ?>
                     </div>
-                    <div class="subject f-regular-13">
-                        <div class="subject-column1">
-                            <div><a href="">Toán học</a></div>
-                            <div><a href="">Văn học</a></div>
-                            <div><a href="">Tiếng Anh</a></div>
-                            <div><a href="">Lịch sử</a></div>
-                            <div><a href="">Địa lý</a></div>
-                            <div><a href="">Vật lý</a></div>
-                            <div><a href="">Sinh học</a></div>
-                        </div>
-                        <div class="subject-column2">
-                            <div><a href="">Soạn văn</a></div>
-                            <div><a href="">Văn mẫu</a></div>
-                            <div><a href="">Tiếng Việt</a></div>
-                            <div><a href="">Đề thi</a></div>
-                        </div>
-                        <div class="subject-column3">
-                            <img src="./images/all/12.png" alt="menu12">
-                        </div>
-                    </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="sub-title">
-                        <a href="">Lớp 11</a>
-                        <i class="icon-down icon-plus d-none fas fa-plus"></i>
-                        <i class="icon-down icon-minus d-none fas fa-minus"></i>
-                    </div>
-                    <div class="subject f-regular-13">
-                        <div class="subject-column1">
-                            <div><a href="">Toán học</a></div>
-                            <div><a href="">Văn học</a></div>
-                            <div><a href="">Tiếng Anh</a></div>
-                            <div><a href="">Lịch sử</a></div>
-                            <div><a href="">Địa lý</a></div>
-                            <div><a href="">Vật lý</a></div>
-                            <div><a href="">Sinh học</a></div>
-                        </div>
-                        <div class="subject-column2">
-                            <div><a href="">Soạn văn</a></div>
-                            <div><a href="">Văn mẫu</a></div>
-                            <div><a href="">Tiếng Việt</a></div>
-                            <div><a href="">Đề thi</a></div>
-                        </div>
-                        <div class="subject-column3">
-                            <img src="./images/all/11.png" alt="menu11">
-                        </div>
-                    </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="sub-title">
-                        <a href="">Lớp 10</a>
-                        <i class="icon-down icon-plus d-none fas fa-plus"></i>
-                        <i class="icon-down icon-minus d-none fas fa-minus"></i>
-                    </div>
-                    <div class="subject f-regular-13">
-                        <div class="subject-column1">
-                            <div><a href="">Toán học</a></div>
-                            <div><a href="">Văn học</a></div>
-                            <div><a href="">Tiếng Anh</a></div>
-                            <div><a href="">Lịch sử</a></div>
-                            <div><a href="">Địa lý</a></div>
-                            <div><a href="">Vật lý</a></div>
-                            <div><a href="">Sinh học</a></div>
-                        </div>
-                        <div class="subject-column2">
-                            <div><a href="">Soạn văn</a></div>
-                            <div><a href="">Văn mẫu</a></div>
-                            <div><a href="">Tiếng Việt</a></div>
-                            <div><a href="">Đề thi</a></div>
-                        </div>
-                        <div class="subject-column3">
-                            <img src="./images/all/10.png" alt="menu10">
-                        </div>
-                    </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="sub-title">
-                        <a href="">Lớp 9</a>
-                        <i class="icon-down icon-plus d-none fas fa-plus"></i>
-                        <i class="icon-down icon-minus d-none fas fa-minus"></i>
-                    </div>
-                    <div class="subject f-regular-13">
-                        <div class="subject-column1">
-                            <div><a href="">Toán học</a></div>
-                            <div><a href="">Văn học</a></div>
-                            <div><a href="">Tiếng Anh</a></div>
-                            <div><a href="">Lịch sử</a></div>
-                            <div><a href="">Địa lý</a></div>
-                            <div><a href="">Vật lý</a></div>
-                            <div><a href="">Sinh học</a></div>
-                        </div>
-                        <div class="subject-column2">
-                            <div><a href="">Soạn văn</a></div>
-                            <div><a href="">Văn mẫu</a></div>
-                            <div><a href="">Tiếng Việt</a></div>
-                            <div><a href="">Đề thi</a></div>
-                        </div>
-                        <div class="subject-column3">
-                            <img src="./images/all/9.png" alt="menu9">
-                        </div>
-                    </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="sub-title">
-                        <a href="">Lớp 8</a>
-                        <i class="icon-down icon-plus d-none fas fa-plus"></i>
-                        <i class="icon-down icon-minus d-none fas fa-minus"></i>
-                    </div>
-                    <div class="subject f-regular-13">
-                        <div class="subject-column1">
-                            <div><a href="">Toán học</a></div>
-                            <div><a href="">Văn học</a></div>
-                            <div><a href="">Tiếng Anh</a></div>
-                            <div><a href="">Lịch sử</a></div>
-                            <div><a href="">Địa lý</a></div>
-                            <div><a href="">Vật lý</a></div>
-                            <div><a href="">Sinh học</a></div>
-                        </div>
-                        <div class="subject-column2">
-                            <div><a href="">Soạn văn</a></div>
-                            <div><a href="">Văn mẫu</a></div>
-                            <div><a href="">Tiếng Việt</a></div>
-                            <div><a href="">Đề thi</a></div>
-                        </div>
-                        <div class="subject-column3">
-                            <img src="./images/all/8.png" alt="menu8">
-                        </div>
-                    </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="sub-title">
-                        <a href="">Lớp 7</a>
-                        <i class="icon-down icon-plus d-none fas fa-plus"></i>
-                        <i class="icon-down icon-minus d-none fas fa-minus"></i>
-                    </div>
-                    <div class="subject f-regular-13">
-                        <div class="subject-column1">
-                            <div><a href="">Toán học</a></div>
-                            <div><a href="">Văn học</a></div>
-                            <div><a href="">Tiếng Anh</a></div>
-                            <div><a href="">Lịch sử</a></div>
-                            <div><a href="">Địa lý</a></div>
-                            <div><a href="">Vật lý</a></div>
-                            <div><a href="">Sinh học</a></div>
-                        </div>
-                        <div class="subject-column2">
-                            <div><a href="">Soạn văn</a></div>
-                            <div><a href="">Văn mẫu</a></div>
-                            <div><a href="">Tiếng Việt</a></div>
-                            <div><a href="">Đề thi</a></div>
-                        </div>
-                        <div class="subject-column3">
-                            <img src="./images/all/7.png" alt="menu7">
-                        </div>
-                    </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="sub-title">
-                        <a href="">Lớp 6</a>
-                        <i class="icon-down icon-plus d-none fas fa-plus"></i>
-                        <i class="icon-down icon-minus d-none fas fa-minus"></i>
-                    </div>
-                    <div class="subject f-regular-13">
-                        <div class="subject-column1">
-                            <div><a href="">Toán học</a></div>
-                            <div><a href="">Văn học</a></div>
-                            <div><a href="">Tiếng Anh</a></div>
-                            <div><a href="">Lịch sử</a></div>
-                            <div><a href="">Địa lý</a></div>
-                            <div><a href="">Vật lý</a></div>
-                            <div><a href="">Sinh học</a></div>
-                        </div>
-                        <div class="subject-column2">
-                            <div><a href="">Soạn văn</a></div>
-                            <div><a href="">Văn mẫu</a></div>
-                            <div><a href="">Tiếng Việt</a></div>
-                            <div><a href="">Đề thi</a></div>
-                        </div>
-                        <div class="subject-column3">
-                            <img src="./images/all/6.png" alt="menu6">
-                        </div>
-                    </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="sub-title">
-                        <a href="">Lớp 5</a>
-                        <i class="icon-down icon-plus d-none fas fa-plus"></i>
-                        <i class="icon-down icon-minus d-none fas fa-minus"></i>
-                    </div>
-                    <div class="subject f-regular-13">
-                        <div class="subject-column1">
-                            <div><a href="">Toán học</a></div>
-                            <div><a href="">Văn học</a></div>
-                            <div><a href="">Tiếng Anh</a></div>
-                            <div><a href="">Lịch sử</a></div>
-                            <div><a href="">Địa lý</a></div>
-                            <div><a href="">Vật lý</a></div>
-                            <div><a href="">Sinh học</a></div>
-                        </div>
-                        <div class="subject-column2">
-                            <div><a href="">Soạn văn</a></div>
-                            <div><a href="">Văn mẫu</a></div>
-                            <div><a href="">Tiếng Việt</a></div>
-                            <div><a href="">Đề thi</a></div>
-                        </div>
-                        <div class="subject-column3">
-                            <img src="./images/all/5.png" alt="menu5">
-                        </div>
-                    </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="sub-title">
-                        <a href="">Lớp 4</a>
-                        <i class="icon-down icon-plus d-none fas fa-plus"></i>
-                        <i class="icon-down icon-minus d-none fas fa-minus"></i>
-                    </div>
-                    <div class="subject f-regular-13">
-                        <div class="subject-column1">
-                            <div><a href="">Toán học</a></div>
-                            <div><a href="">Văn học</a></div>
-                            <div><a href="">Tiếng Anh</a></div>
-                            <div><a href="">Lịch sử</a></div>
-                            <div><a href="">Địa lý</a></div>
-                            <div><a href="">Vật lý</a></div>
-                            <div><a href="">Sinh học</a></div>
-                        </div>
-                        <div class="subject-column2">
-                            <div><a href="">Soạn văn</a></div>
-                            <div><a href="">Văn mẫu</a></div>
-                            <div><a href="">Tiếng Việt</a></div>
-                            <div><a href="">Đề thi</a></div>
-                        </div>
-                        <div class="subject-column3">
-                            <img src="./images/all/4.png" alt="menu4">
-                        </div>
-                    </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="sub-title">
-                        <a href="">Lớp 3</a>
-                        <i class="icon-down icon-plus d-none fas fa-plus"></i>
-                        <i class="icon-down icon-minus d-none fas fa-minus"></i>
-                    </div>
-                    <div class="subject f-regular-13">
-                        <div class="subject-column1">
-                            <div><a href="">Toán học</a></div>
-                            <div><a href="">Văn học</a></div>
-                            <div><a href="">Tiếng Anh</a></div>
-                            <div><a href="">Lịch sử</a></div>
-                            <div><a href="">Địa lý</a></div>
-                            <div><a href="">Vật lý</a></div>
-                            <div><a href="">Sinh học</a></div>
-                        </div>
-                        <div class="subject-column2">
-                            <div><a href="">Soạn văn</a></div>
-                            <div><a href="">Văn mẫu</a></div>
-                            <div><a href="">Tiếng Việt</a></div>
-                            <div><a href="">Đề thi</a></div>
-                        </div>
-                        <div class="subject-column3">
-                            <img src="./images/all/3.png" alt="menu3">
-                        </div>
-                    </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="sub-title">
-                        <a href="">Lớp 2</a>
-                        <i class="icon-down icon-plus d-none fas fa-plus"></i>
-                        <i class="icon-down icon-minus d-none fas fa-minus"></i>
-                    </div>
-                    <div class="subject f-regular-13">
-                        <div class="subject-column1">
-                            <div><a href="">Toán học</a></div>
-                            <div><a href="">Văn học</a></div>
-                            <div><a href="">Tiếng Anh</a></div>
-                            <div><a href="">Lịch sử</a></div>
-                            <div><a href="">Địa lý</a></div>
-                            <div><a href="">Vật lý</a></div>
-                            <div><a href="">Sinh học</a></div>
-                        </div>
-                        <div class="subject-column2">
-                            <div><a href="">Soạn văn</a></div>
-                            <div><a href="">Văn mẫu</a></div>
-                            <div><a href="">Tiếng Việt</a></div>
-                            <div><a href="">Đề thi</a></div>
-                        </div>
-                        <div class="subject-column3">
-                            <img src="./images/all/2.png" alt="menu2">
-                        </div>
-                    </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="sub-title">
-                        <a href="">Lớp 1</a>
-                        <i class="icon-down icon-plus d-none fas fa-plus"></i>
-                        <i class="icon-down icon-minus d-none fas fa-minus"></i>
-                    </div>
-                    <div class="subject f-regular-13">
-                        <div class="subject-column1">
-                            <div><a href="">Toán học</a></div>
-                            <div><a href="">Văn học</a></div>
-                            <div><a href="">Tiếng Anh</a></div>
-                            <div><a href="">Lịch sử</a></div>
-                            <div><a href="">Địa lý</a></div>
-                            <div><a href="">Vật lý</a></div>
-                            <div><a href="">Sinh học</a></div>
-                        </div>
-                        <div class="subject-column2">
-                            <div><a href="">Soạn văn</a></div>
-                            <div><a href="">Văn mẫu</a></div>
-                            <div><a href="">Tiếng Việt</a></div>
-                            <div><a href="">Đề thi</a></div>
-                        </div>
-                        <div class="subject-column3">
-                            <img src="./images/all/1.png" alt="menu1">
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </nav>
@@ -411,44 +143,18 @@
                         <div class="post-heading">
                             <div class="post-author">
                                 <a href=""><img class="author-thumbnail" src="./images/thumbnail/author-post.png" alt=""></a>
-                                <a class="f-medium-15" href="">Nguyễn Công Hoan</a>
+                                <a class="f-medium-15" href=""><?php echo $data_main_content[0]->author ?></a>
                             </div>
                             <div class="post-info">
-                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                                <div><img src="./images/homepage/icon-view.png" alt="icon-view"><?php echo $data_main_content[0]->view ?></div>
+                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like"><?php echo $data_main_content[0]->like ?></div>
                             </div>
                         </div>
                         <div class="post-content f-regular-17">
-                            <p>Phong cách Hồ Chí Minh rút trong bài Phong cách Hồ Chí Minh, cái vĩ đại gắn với cái giản dị của Lê Anh
-                                Trà in trong cuốn sách Hồ Chí Minh và văn hóa Việt Nam năm 1990.</p><br>
-                            <p>Luận điểm thứ nhất mà người viết nêu lên là tầm sâu rộng vốn tri thức văn hóa của Hồ Chí Minh. Do đâu mà có vốn tri
-                                thức văn hóa ấy? Hồ Chí Minh có một cuộc sống phong phú, sôi nổi. Người "đã tiếp xúc” với văn hóa nhiều nước ở
-                                phương Đông và phương Tây. Người "đã ghé lại" nhiều hải cảng, "đã thăm "các nước châu Phi, châu Á, châu Mĩ. Người
-                                "đã sống dài ngày" ở Anh, ở Pháp. Lúc làm bồi, lúc cuốc tuyết, lúc làm nghề rửa ảnh... Chế Lan Viên cũng đã có lần
-                                viết:</p><br>
-                            <p>Đời bồi tàu lênh đênh theo sóng bể,</p><br>
-                            <p>Người đi hỏi khắp bóng cờ châu Mĩ, châu Phi</p><br>
-                            <p>Những đất tự do, những trời nô lệ</p><br>
-                            <p>Những con đường cách mạng đang tìm đi.</p><br>
-                            <p>(Người đi tìm hình của nước)</p><br>
-                            <p>Người "nói và viết thạo" nhiều ngoại ngữ như Pháp, Anh, Hoa, Nga... Không phải là lắm tiền đi du lịch... mà trái lại
-                                cuộc đời Người "đầy truân chuyên", Người "đã làm nhiều nghề", và đặc biệt là "đến đâu Người cũng học hỏi, tìm hiểu
-                                văn hóa, nghệ thuật đến một mức khá uyên thâm". Hồ Chí Minh "đã tiếp thu" mọi cái hay cái đẹp của các nền văn hóa,
-                                và "đã nhào nặn" tới cái gốc văn hóa dân tộc đã thấm sâu vào tâm hồn mình, máu thịt mình, nên đã trở thành "một
-                                nhân cách rất Việt Nam, một lối sống rất bình dị, rất Việt Nam, rất phương Đông, nhưng cũng đồng thời rất mới, rất
-                                hiện đại”. Cách lập luận chặt chẽ, cách nêu luận cứ xác đáng, lối diễn đạt tinh tế của Lê Anh Trà đã tạo nên sức
-                                thuyết phục lớn.</p><br>
-                            <p>Luận điểm thứ hai mà tác giả đưa ra là lối sống rất bình dị, rất phương Đông, rất Việt Nam của Hồ Chí Minh. Lê Anh
-                                Trà đã sử dụng 3 luận cứ (nơi ở, trang phục, cách ăn mặc) để giải thích và chứng minh cho luận điểm này. Cái "cung
-                                điện "của vị Chủ tịch nước là một chiếc nhà sàn nhỏ bằng gỗ bên cạnh cái ao. Chỉ vẻn vẹn có vài phòng để "tiếp
-                                khách, họp Bộ Chính trị, làm việc và ngủ nghỉ” đồ đạc "rất mộc mạc, đơn sơ". Trang phục của Người "hết sức giản dị”
-                                với bộ quần áo bà ba nâu, chiếc áo trấn thủ, đôi dép lốp "thô sơ như của các chiến sĩ Trường Sơn”. Cách ăn uống của
-                                Hồ Chí Minh "rất đạm bạc": cá kho, rau luộc, dưa ghém, cà muối, cháo hoa..., đó là "những món ăn dân tộc không chút
-                                cầu kì". Những luận cứ mà người viết nêu ra không có gì mới. Nhiều người đã nói, đã viết, nhiều hồi kí đã kể lại mà
-                                ta đã biết. Nhưng Lê Anh Trà đã viết một cách giản dị, thân mật, trân trọng và ngợi ca.</p><br>
+                            <?php echo $data_main_content[0]->detail ?>
                         </div>
                     </div>
-                    <div class="fb-comments" data-href="http://dinhtien12298.github.io/web2018/detail.html" data-width="100%"></div>
+                    <div class="fb-comments" data-href="<?php echo $data_main_content[0]->comment ?>" data-width="100%"></div>
                 </div>
                 <div class="side-bar">
                     <div class="related">
@@ -457,17 +163,14 @@
                         </div>
                         <div class="line-orange"></div>
                         <div class="related-content f-regular-14">
-                            <a href="">Soạn bài Bánh trưng bánh dày</a>
-                            <a href="">Người lái đò trên sông Lô</a>
-                            <a href="">Chiếc lược bằng vàng ngà mới nhất luôn</a>
-                            <a href="">Soạn bài Bánh trưng bánh dày</a>
-                            <a href="">Người lái đò trên sông Lô</a>
-                            <a href="">Chiếc lược bằng vàng ngà vàng ngà mới nhất luôn</a>
-                            <a href="">Người lái máy bay trên xe máy</a>
-                            <a href="">Người lái đò trên sông Trường Giang</a>
+                            <?php foreach ($data_related as $post) {?>
+                                <a href=""><?php echo $post->title ?></a>
+                            <?php }?>
                         </div>
                     </div>
-                    <a href=""><img src="./images/detail/advertiment.png" alt=""></a>
+                    <?php foreach ($data_ad as $ad) {?>
+                        <a href=""><img src="<?php echo $ad->link; ?>" alt="<?php echo $ad->title; ?>"></a>
+                    <?php }?>
                 </div>
             </div>
             <div class="more-post">
@@ -484,114 +187,25 @@
                 </div>
                 <div class="line-orange"></div>
                 <div class="tab-post">
-                    <div class="post-model">
-                        <div class="post-title">
-                            <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
-                        </div>
-                        <div class="post-heading d-flex">
-                            <div class="post-author f-medium-12">
-                                Nguyễn Công Hoan
+                    <?php foreach ($data_more_post as $post) {?>
+                        <div class="post-model">
+                            <div class="post-title">
+                                <a href="" class="f-medium-17"><?php echo $post->title ?></a>
                             </div>
-                            <div class="post-info f-regular-13">
-                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-heading d-flex">
+                                <div class="post-author f-medium-12">
+                                    <?php echo $post->author ?>
+                                </div>
+                                <div class="post-info f-regular-13">
+                                    <div><img src="./images/homepage/icon-view.png" alt="icon-view"><?php echo $post->view ?></div>
+                                    <div><img src="./images/homepage/icon-heart.png" alt="icon-like"><?php echo $post->like ?></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="post-content f-regular-13">
-                            Có xu hướng công khai đe dọa các đồng minh lâu năm, nhưng lại gần gũi với kẻ thù và cự tuyệt mọi lời tư
-                            vấn có xu hướng công khai đe dọa các đồng minh lâu năm
-                        </div>
-                    </div>
-                    <div class="post-model">
-                        <div class="post-title">
-                            <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
-                        </div>
-                        <div class="post-heading d-flex">
-                            <div class="post-author f-medium-12">
-                                Nguyễn Công Hoan
-                            </div>
-                            <div class="post-info f-regular-13">
-                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
+                            <div class="post-content f-regular-13">
+                                <?php echo $post->content ?>
                             </div>
                         </div>
-                        <div class="post-content f-regular-13">
-                            Có xu hướng công khai đe dọa các đồng minh lâu năm, nhưng lại gần gũi với kẻ thù và cự tuyệt mọi lời tư
-                            vấn có xu hướng công khai đe dọa các đồng minh lâu năm
-                        </div>
-                    </div>
-                    <div class="post-model">
-                        <div class="post-title">
-                            <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
-                        </div>
-                        <div class="post-heading d-flex">
-                            <div class="post-author f-medium-12">
-                                Nguyễn Công Hoan
-                            </div>
-                            <div class="post-info f-regular-13">
-                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
-                            </div>
-                        </div>
-                        <div class="post-content f-regular-13">
-                            Có xu hướng công khai đe dọa các đồng minh lâu năm, nhưng lại gần gũi với kẻ thù và cự tuyệt mọi lời tư
-                            vấn có xu hướng công khai đe dọa các đồng minh lâu năm
-                        </div>
-                    </div>
-                    <div class="post-model">
-                        <div class="post-title">
-                            <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
-                        </div>
-                        <div class="post-heading d-flex">
-                            <div class="post-author f-medium-12">
-                                Nguyễn Công Hoan
-                            </div>
-                            <div class="post-info f-regular-13">
-                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
-                            </div>
-                        </div>
-                        <div class="post-content f-regular-13">
-                            Có xu hướng công khai đe dọa các đồng minh lâu năm, nhưng lại gần gũi với kẻ thù và cự tuyệt mọi lời tư
-                            vấn có xu hướng công khai đe dọa các đồng minh lâu năm
-                        </div>
-                    </div>
-                    <div class="post-model">
-                        <div class="post-title">
-                            <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
-                        </div>
-                        <div class="post-heading d-flex">
-                            <div class="post-author f-medium-12">
-                                Nguyễn Công Hoan
-                            </div>
-                            <div class="post-info f-regular-13">
-                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
-                            </div>
-                        </div>
-                        <div class="post-content f-regular-13">
-                            Có xu hướng công khai đe dọa các đồng minh lâu năm, nhưng lại gần gũi với kẻ thù và cự tuyệt mọi lời tư
-                            vấn có xu hướng công khai đe dọa các đồng minh lâu năm
-                        </div>
-                    </div>
-                    <div class="post-model">
-                        <div class="post-title">
-                            <a href="" class="f-medium-17">Phân tích đấu tranh cho một thế giới hòa bình</a>
-                        </div>
-                        <div class="post-heading d-flex">
-                            <div class="post-author f-medium-12">
-                                Nguyễn Công Hoan
-                            </div>
-                            <div class="post-info f-regular-13">
-                                <div><img src="./images/homepage/icon-view.png" alt="icon-view">342</div>
-                                <div><img src="./images/homepage/icon-heart.png" alt="icon-like">96</div>
-                            </div>
-                        </div>
-                        <div class="post-content f-regular-13">
-                            Có xu hướng công khai đe dọa các đồng minh lâu năm, nhưng lại gần gũi với kẻ thù và cự tuyệt mọi lời tư
-                            vấn có xu hướng công khai đe dọa các đồng minh lâu năm
-                        </div>
-                    </div>
+                    <?php }?>
                 </div>
             </div>
         </div>
@@ -603,13 +217,9 @@
                 <a href=""><img src="./images/all/logo.png" alt="logo"></a>
             </div>
             <div class="menu f-regular-14">
-                <a href="">Toán học</a>
-                <a href="">Văn học</a>
-                <a href="">Giáo dục công dân</a>
-                <a href="">Lịch sử</a>
-                <a href="">Địa lý</a>
-                <a href="">Tiếng Anh</a>
-                <a href="">Soạn văn</a>
+                <?php foreach($data_footer as $data) { ?>
+                    <a href=""><?php echo "$data->subject"; ?></a>
+                <?php } ?>
             </div>
             <div class="copyright f-regular-12"><p>Copyright © 2018 Miny. Design by 123DOC</p></div>
         </div>

@@ -100,44 +100,49 @@ function scrollToTop(totalTime, easingPower) {
 var viewMoreButton = document.getElementsByClassName("view-more");
 var post = document.getElementsByClassName('post-model');
 var showPost = document.getElementsByClassName('tab-post');
-var hiddenSubject = document.getElementsByClassName('list-post');
+var listPost = document.getElementsByClassName('list-post');
 var loading = document.getElementsByClassName('loading')[0];
 var pageButton = document.getElementsByClassName('page-button')[0];
 
-for (let i = 0; i < 2; i++) {
+for (let i = 0; i < listPost.length; i++) {
+    post[(post.length/2)*i+3].style.opacity = '0.5';
     viewMoreButton[i].onclick = function() {
         viewMoreButton[i].style.display = 'none';
-        hiddenSubject[1-i].style.display = 'none';
-        post[4*i+3].style.opacity = '1.0';
+        listPost[1-i].style.display = 'none';
+        post[(post.length/2)*i+3].style.opacity = '1.0';
         loading.style.display = 'block';
         setTimeout(function() {
             axios({
                 method: 'GET',
-                url: 'https://dinhtien12298.github.io/web2018/data/postCat.json',
+                url: 'https://dinhtien12298.github.io/web2018/data/categoryData.php',
+                params: {
+                    "class": viewMoreButton[i].dataset.class,
+                    "subject": viewMoreButton[i].dataset.subject
+                }
             }).then((data) => {
-                var posts = data.data;
-                var postHTML = posts.map(
-                    post =>
-                        `<div class="post-model">
-                            <div class="post-title">
-                                <a href="" class="f-medium-17">${post.title}</a>
-                            </div>
-                            <div class="post-heading d-flex">
-                                <div class="post-author f-medium-12">
-                                    ${post.author}
-                                </div>
-                                <div class="post-info f-regular-13">
-                                    <div><img src="images/homepage/icon-view.png" alt="icon-view">${post.view}</div>
-                                    <div><img src="images/homepage/icon-heart.png" alt="icon-like">${post.like}</div>
-                                </div>
-                            </div>
-                            <div class="post-content f-regular-13">
-                                ${post.content}
-                            </div>
-                        </div>`
-                    );
-                console.log(postHTML.length);
-                showPost[i].innerHTML += `${postHTML.join("")}`;
+                console.log(data);
+                // var posts = data;
+                // var postHTML = posts.map(
+                //     post =>
+                //         `<div class="post-model">
+                //             <div class="post-title">
+                //                 <a href="" class="f-medium-17">${post.title}</a>
+                //             </div>
+                //             <div class="post-heading d-flex">
+                //                 <div class="post-author f-medium-12">
+                //                     ${post.author}
+                //                 </div>
+                //                 <div class="post-info f-regular-13">
+                //                     <div><img src="images/homepage/icon-view.png" alt="icon-view">${post.view}</div>
+                //                     <div><img src="images/homepage/icon-heart.png" alt="icon-like">${post.like}</div>
+                //                 </div>
+                //             </div>
+                //             <div class="post-content f-regular-13">
+                //                 ${post.content}
+                //             </div>
+                //         </div>`
+                //     );
+                // showPost[i].innerHTML += `${postHTML.join("")}`;
                 setTimeout(function() {
                     loading.style.display = 'none';
                     pageButton.style.display = 'block';

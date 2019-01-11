@@ -386,10 +386,6 @@ nav .sub-menu .subject .subject-column1 div a,
     align-items: center;
 }
 
-.post-model:nth-child(4) {
-    opacity: 0.5;
-}
-
 .post-model:hover {
     transform: translateZ(3px);
     box-shadow: 0 0 5px 0.5px #ff9900;

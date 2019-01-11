@@ -2,6 +2,7 @@
     $data_navbar = json_decode( file_get_contents("./data/navbar.json") );
     $data_post = json_decode( file_get_contents("./data/posts.json") );
     $data_footer = json_decode( file_get_contents("./data/footer.json") );
+    $data_ad = json_decode( file_get_contents("./data/advertiment.json") );
     $class_name = "Lớp 9";
     $list_subject = array("Soạn văn", "Toán học");
     $data_content = array();
@@ -13,6 +14,7 @@
             }
         }
     }
+
 ?>
 
 <!DOCTYPE html>
@@ -114,7 +116,7 @@
         <div class="container">
             <div class="breadcrumb f-regular-13">
                 <div><a href="">TRANG CHỦ</a></div>
-                <div>LỚP 9</div>
+                <div id="class-name">LỚP 9</div>
             </div>
             <div class="banner-heading f-bold-30">
                 LỚP 9 - GIẢI BÀI TẬP LỚP 9
@@ -140,7 +142,12 @@
                         </div>
                         <div class="line-orange"></div>
                         <div class="tab-post">
-                            <?php for ($i = 0; $i < 4; $i++) {?>
+                            <?php if (sizeof($list_post) >= 4) {
+                                    $show_post = 4;
+                                } else {
+                                    $show_post = sizeof($list_post);
+                            }
+                            for ($i = 0; $i < $show_post; $i++) {?>
                                 <div class="post-model">
                                     <div class="post-title">
                                         <a href="" class="f-medium-17"><?php echo $list_post[$i]->title ?></a>
@@ -160,7 +167,7 @@
                                 </div>
                             <?php }?>
                         </div>
-                        <div class="view-more">
+                        <div data-class="<?php echo $class_name ?>" data-subject="<?php echo $list_post[0]->subject ?>"  class="view-more">
                             <button class="f-regular-13">Xem thêm</button>
                         </div>
                     </div>
@@ -181,7 +188,9 @@
                 </div>
             </div>
             <div class="side-bar">
-                <a href=""><img src="./images/detail/advertiment.png" alt=""></a>
+                <?php foreach ($data_ad as $ad) {?>
+                    <a href=""><img src="<?php echo $ad->link; ?>" alt="<?php echo $ad->title; ?>"></a>
+                <?php }?>
             </div>
         </div>
     </div>
