@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4420a77-d373-4af1-bc73-24dbca0e2b30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/footer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/navbar.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/posts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learn.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/category.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/category.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/homepage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/postCat.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/postCat.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/homepage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Property/colors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Property/fonts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Property/images.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/category.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/homepage.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/category.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="122" column="28" lean-forward="true" selection-start-line="122" selection-start-column="28" selection-end-line="122" selection-end-column="28" />
+            <state relative-caret-position="-256">
+              <caret line="117" column="38" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -80,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/postCat.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-140">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state relative-caret-position="26">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -102,7 +87,6 @@
       <list>
         <option value="$PROJECT_DIR$/../learn.php" />
         <option value="$PROJECT_DIR$/post.json" />
-        <option value="$PROJECT_DIR$/data/postCat.json" />
         <option value="$PROJECT_DIR$/data/footer.json" />
         <option value="$PROJECT_DIR$/learn.php" />
         <option value="$PROJECT_DIR$/css/homepage.css" />
@@ -112,6 +96,7 @@
         <option value="$PROJECT_DIR$/homepage.php" />
         <option value="$PROJECT_DIR$/css/category.css" />
         <option value="$PROJECT_DIR$/category.php" />
+        <option value="$PROJECT_DIR$/data/postCat.json" />
         <option value="$PROJECT_DIR$/js/category.js" />
       </list>
     </option>
@@ -194,22 +179,22 @@
       <workItem from="1546998951302" duration="2896000" />
       <workItem from="1547017762388" duration="9634000" />
       <workItem from="1547084221907" duration="27792000" />
-      <workItem from="1547169853429" duration="4116000" />
+      <workItem from="1547169853429" duration="7033000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47469000" />
+    <option name="totallyTimeSpent" value="50386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24583964" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24583964" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32991454" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -290,13 +275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/postCat.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/homepage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2024">
@@ -330,10 +308,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/postCat.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/category.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="122" column="28" lean-forward="true" selection-start-line="122" selection-start-column="28" selection-end-line="122" selection-end-column="28" />
+        <state relative-caret-position="-256">
+          <caret line="117" column="38" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
         </state>
       </provider>
     </entry>
