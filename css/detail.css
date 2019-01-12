@@ -190,11 +190,6 @@ nav .sub-menu .subject .subject-column3 {
     margin-left: -50px;
 }
 
-nav .sub-menu .subject .subject-column1,
-nav .sub-menu .subject .subject-column2 {
-    padding-bottom: 50px;
-}
-
 nav .sub-menu .subject .subject-column1 div,
 .sub-menu .subject .subject-column2 div {
     width: 120px;
@@ -258,6 +253,11 @@ nav .sub-menu .subject .subject-column1 div a,
     nav .sub-menu:nth-child(12):hover .subject {
         margin-left: -222%;
     }
+
+    nav .sub-menu .subject .subject-column1,
+    nav .sub-menu .subject .subject-column2 {
+        padding-bottom: 50px;
+    }
 }
 
 /* Banner */
@@ -270,6 +270,7 @@ nav .sub-menu .subject .subject-column1 div a,
 
 #banner .breadcrumb {
     padding-top: 10px;
+    text-transform: uppercase;
 }
 
 #banner .breadcrumb div {
@@ -291,6 +292,7 @@ nav .sub-menu .subject .subject-column1 div a,
     text-align: center;
     color: #ffffff;
     padding-top: 10px;
+    text-transform: uppercase;
 }
 
 #banner .breadcrumb div a:hover {

@@ -25,6 +25,25 @@
             break;
         }
     }
+
+    $breadcrumb = array();
+    function findDad($child, $breadcrumb) {
+        global $post_title, $post_subject, $post_class;
+        array_push($breadcrumb, $child);
+        if ($child == $post_title) {
+            $child = $post_subject;
+        }
+        elseif ($child == $post_subject) {
+            $child = $post_class;
+        }
+        elseif ($child == $post_class) {
+            $child = "TRANG CHỦ";
+        }
+        elseif ($child == "TRANG CHỦ") {
+            return $breadcrumb;
+        }
+        return findDad($child, $breadcrumb);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -123,14 +142,14 @@
     <div id="banner">
         <div class="container">
             <div class="breadcrumb f-regular-13">
-                <div><a href="">TRANG CHỦ</a></div>
-                <div><a href="">LỚP 9</a></div>
-                <div><a href="">VĂN HỌC</a></div>
-                <div><a href="">SOẠN VĂN</a></div>
-                <div>PHONG CÁCH HỒ CHÍ MINH</div>
+                <?php $breadcrumb = array_reverse(findDad($post_title, $breadcrumb));
+                for ($i = 0; $i < sizeof($breadcrumb) - 1; $i++) {?>
+                    <div><a href=""><?php echo $breadcrumb[$i] ?></a></div>
+                <?php }?>
+                <div><?php echo $breadcrumb[sizeof($breadcrumb) - 1] ?></div>
             </div>
             <div class="banner-heading f-bold-30">
-                SOẠN VĂN - PHONG CÁCH HỒ CHÍ MINH
+                <?php echo $post_subject ?> - <?php echo $post_title ?>
             </div>
         </div>
     </div>

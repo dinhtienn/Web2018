@@ -97,7 +97,7 @@
                 width: '1px',
                 // width of the outline
                 grayscaleOnDebugAll: false,
-                // apply grayscale filter to every element
+                // apply grayscale filter to every elements
                 customClass: 'checkingCSS' // a class existent in your stylesheet
                 // init the debugger
 
@@ -133,7 +133,7 @@
                     this.removeGlobalClass = this.removeGlobalClass.bind(this);
                 }
                 init() {
-                    // initialize invisible label element => we'll make it visible on selected keystroke
+                    // initialize invisible label elements => we'll make it visible on selected keystroke
                     this.label = document.createElement('div');
                     this.label.classList.add('debucsser-label');
                     this.label.style = 'display: none;';

@@ -39,8 +39,6 @@ closeButton.onclick = function() {
 
 // Mobile: Menu Accordion
 var subject = document.getElementsByClassName("subject");
-var iconPlus = document.getElementsByClassName("icon-plus");
-var iconMinus = document.getElementsByClassName("icon-minus");
 
 for (let i = 0; i < subMenu.length; i++) {
     subMenu[i].addEventListener("click", function() {
@@ -94,60 +92,4 @@ function scrollToTop(totalTime, easingPower) {
             clearInterval(scrollByPixel);
         }
     }, 1);
-}
-
-// ViewMore
-var viewMoreButton = document.getElementsByClassName("view-more");
-var post = document.getElementsByClassName('post-model');
-var showPost = document.getElementsByClassName('tab-post');
-var listPost = document.getElementsByClassName('list-post');
-var loading = document.getElementsByClassName('loading')[0];
-var pageButton = document.getElementsByClassName('page-button')[0];
-
-for (let i = 0; i < listPost.length; i++) {
-    post[(post.length/2)*i+3].style.opacity = '0.5';
-    viewMoreButton[i].onclick = function() {
-        viewMoreButton[i].style.display = 'none';
-        listPost[1-i].style.display = 'none';
-        post[(post.length/2)*i+3].style.opacity = '1.0';
-        loading.style.display = 'block';
-        setTimeout(function() {
-            axios({
-                method: 'GET',
-                url: 'https://dinhtien12298.github.io/web2018/data/categoryData.php',
-                params: {
-                    "class": viewMoreButton[i].dataset.class,
-                    "subject": viewMoreButton[i].dataset.subject
-                }
-            }).then((data) => {
-                console.log(data);
-                // var posts = data;
-                // var postHTML = posts.map(
-                //     post =>
-                //         `<div class="post-model">
-                //             <div class="post-title">
-                //                 <a href="" class="f-medium-17">${post.title}</a>
-                //             </div>
-                //             <div class="post-heading d-flex">
-                //                 <div class="post-author f-medium-12">
-                //                     ${post.author}
-                //                 </div>
-                //                 <div class="post-info f-regular-13">
-                //                     <div><img src="images/homepage/icon-view.png" alt="icon-view">${post.view}</div>
-                //                     <div><img src="images/homepage/icon-heart.png" alt="icon-like">${post.like}</div>
-                //                 </div>
-                //             </div>
-                //             <div class="post-content f-regular-13">
-                //                 ${post.content}
-                //             </div>
-                //         </div>`
-                //     );
-                // showPost[i].innerHTML += `${postHTML.join("")}`;
-                setTimeout(function() {
-                    loading.style.display = 'none';
-                    pageButton.style.display = 'block';
-                }, 1);
-            });
-        }, 1300);
-    }
 }
