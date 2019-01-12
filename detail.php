@@ -4,6 +4,7 @@
     $data_ad = json_decode( file_get_contents("./data/advertiment.json") );
     $data_main_content = json_decode( file_get_contents("./data/postdetail.json") );
     $data_content = json_decode( file_get_contents("./data/posts.json") );
+    $data_type = json_decode( file_get_contents("./data/type.json") )[0];
     $post_title = $data_main_content[0]->title;
     $post_class = $data_main_content[0]->class;
     $post_subject = $data_main_content[0]->subject;
@@ -25,6 +26,30 @@
             break;
         }
     }
+
+//    $breadcrumbs = array();
+//    function createBreadcrumb($obj, $post) {
+//        global $breadcrumbs, $data_type;
+//        array_push($breadcrumbs, $obj);
+//        foreach ($post as $type => $value) {
+//            if ($value == $obj) {
+//                if ($data_type->$type != 1) {
+//                    $data_id = $data_type->$type - 1;
+//                    foreach ($data_type as $type_next => $value1) {
+//                        if ($value1 = $data_id) {
+//                            $type_name = $type_next;
+//                            echo $type_name;
+//                            die();
+//                        }
+//                    }
+//                    global $type_name;
+//                    createBreadcrumb($post->$type_name, $post);
+//                } else {
+//                    return $breadcrumbs;
+//                }
+//            }
+//        }
+//    }
 
     $breadcrumb = array();
     function findDad($child, $breadcrumb) {
