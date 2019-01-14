@@ -1,7 +1,7 @@
 <?php
     // Hàm lấy ra các Post thỏa mãn
-    function findPost($post, $class_name, $subject_name) {
-        if ($post->class == $class_name && $post->subject == $subject_name) {
+    function findPost($post, $post_class, $subject_name) {
+        if ($post->class == $post_class && $post->subject == $subject_name) {
             return true;
         } else {
             return false;
@@ -51,7 +51,7 @@
         foreach ($list_subject as $subject_name) {
             $data_content[array_search($subject_name, $list_subject)] = array();
             foreach ($data_post as $post) {
-                if (findPost($post, $class_name, $subject_name)) {
+                if (findPost($post, $post_class, $subject_name)) {
                     array_push($data_content[array_search($subject_name, $list_subject)], $post);
                 }
             }
@@ -60,15 +60,28 @@
 
     // Hàm tạo breadcrumb
     $breadcrumb = array();
-    function findDad($child, $breadcrumb) {
-        global $class_name;
-        array_push($breadcrumb, $child);
-        if ($child == $class_name) {
-            $child = "TRANG CHỦ";
-        }
-        elseif ($child == "TRANG CHỦ") {
+    function createBreadcrumb($obj, $post) {
+        global $breadcrumb, $data_type;
+        array_push($breadcrumb, $obj);
+        if ($obj == 'trang chủ') {
             return $breadcrumb;
+        } else {
+            foreach ($post as $type => $value) {
+                if ($value == $obj) {
+                    $type_number = $data_type->$type - 1;
+                    global $type_name;
+                    foreach ($data_type as $type_next => $value1) {
+                        if ($value1 == $type_number) {
+                            $type_name = $type_next;
+                        }
+                    }
+                    if (isset($post->$type_name)) {
+                        return createBreadcrumb($post->$type_name, $post);
+                    } else {
+                        return createBreadcrumb('trang chủ', $post);
+                    }
+                }
+            }
         }
-        return findDad($child, $breadcrumb);
     }
 ?>

@@ -39,8 +39,8 @@
                     </div>
                 <?php }?>
             </div>
-            <div data-class="<?php echo $class_name ?>" data-subject="<?php echo $list_post[0]->subject ?>"  class="view-more">
-                <a href="/miny/category.php?class=<?php echo $class_name ?>&subject=<?php echo $list_post[0]->subject ?>"><button class="f-regular-13">Xem thêm</button></a>
+            <div data-class="<?php echo $post_class ?>" data-subject="<?php echo $list_post[0]->subject ?>" class="view-more">
+                <a href="/miny/category.php?class=<?php echo $post_class ?>&subject=<?php echo $list_post[0]->subject ?>"><button class="f-regular-13">Xem thêm</button></a>
             </div>
         </div>
     <?php }?>

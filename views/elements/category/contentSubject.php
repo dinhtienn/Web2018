@@ -35,7 +35,7 @@
         </div>
         <div class="page-button">
             <?php for ($i = 0; $i < $page_button; $i++) {?>
-                <a href="/miny/category.php?class=<?php echo $class_name ?>&subject=<?php echo $data_show_more[0]->subject ?>&page=<?php echo $i + 1 ?>"><button class="f-regular-14"><?php echo $i + 1 ?></button></a>
+                <a href="/miny/category.php?class=<?php echo $post_class ?>&subject=<?php echo $data_show_more[0]->subject ?>&page=<?php echo $i + 1 ?>"><button class="f-regular-14"><?php echo $i + 1 ?></button></a>
             <?php }?>
         </div>
     </div>
