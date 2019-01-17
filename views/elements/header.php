@@ -3,7 +3,7 @@
         <!-- Logo + Menu -->
         <div class="header-container-1">
             <div class="logo">
-                <a href=""><img src="./images/all/logo.png" alt=""></a>
+                <a href="/miny/homepage.php"><img src="./images/all/logo.png" alt=""></a>
             </div>
             <div class="menu f-regular-14">
                 <button href="">

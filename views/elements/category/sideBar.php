@@ -1,5 +1,5 @@
 <div class="side-bar">
-    <?php foreach ($data_ad as $ad) {?>
-        <a href=""><img src="<?php echo $ad->link; ?>" alt="<?php echo $ad->title; ?>"></a>
+    <?php foreach ($all_ad as $ad) {?>
+        <a href="<?php echo $ad->link ?>"><img src="<?php echo $ad->image ?>" alt="<?php echo $ad->title ?>"></a>
     <?php }?>
 </div>

@@ -2,6 +2,10 @@
 var layerOpacity = document.getElementsByClassName("layer-opacity")[0];
 var subMenu = document.getElementsByClassName("sub-menu");
 for (i = 0; i < subMenu.length; i++) {
+    // MarginLeft in NavBar
+    if (i != 0) {
+        subMenu[i].style.marginLeft = "-1px";
+    }
     subMenu[i].onmouseover = function() {
         if (window.outerWidth > 768) {
             layerOpacity.style.height = document.getElementsByTagName('body')[0].clientHeight + "px";
@@ -41,6 +45,10 @@ closeButton.onclick = function() {
 var subject = document.getElementsByClassName("subject");
 
 for (let i = 0; i < subMenu.length; i++) {
+    // Subject MarginLeft when closing to RightWindow
+    if (i < subMenu.length && i > subMenu.length - 4 && window.outerWidth > 768) {
+        subject[i].style.marginLeft = "-222%";
+    }
     subMenu[i].addEventListener("click", function() {
         var current = subMenu[i];
         var list_menu_active = document.getElementsByClassName('menu-active');
@@ -52,11 +60,7 @@ for (let i = 0; i < subMenu.length; i++) {
         }
         
         if(current.classList.contains('menu-active')){
-            current.classList.add('menu-reactive');
-            setTimeout(function() {
-                current.classList.remove('menu-active');
-                current.classList.remove('menu-reactive');
-            }, 300);
+            current.classList.remove('menu-active');
         }
         else {
             current.classList.add('menu-active');
@@ -92,4 +96,33 @@ function scrollToTop(totalTime, easingPower) {
             clearInterval(scrollByPixel);
         }
     }, 1);
+}
+
+// Border in Footer Menu Tab
+var footerMenuItem = document.getElementsByClassName("footer-menu-item");
+
+for (i = 0; i < footerMenuItem.length; i++) {
+    if (i != 0 && i != footerMenuItem.length - 1) {
+        footerMenuItem[i].classList.add('border-footer');
+        if (i != 1) {
+            footerMenuItem[i].style.marginLeft = "-1px";
+        }
+    }
+}
+
+// Active Pagination button
+var paginateButton = document.getElementsByClassName('paginate-button');
+const query = new URL(window.location.href).href.split("=");
+if (paginateButton.length > 0) {
+    const page = query[query.length - 1];
+    paginateButton[page-1].classList.add('active-pagination-button');
+}
+
+// Click on PostModel
+var postModel = document.getElementsByClassName('post-model');
+
+for (let i = 0; i < postModel.length; i++) {
+    postModel[i].onclick = function () {
+        window.location.href = postModel[i].dataset.location;
+    }
 }

@@ -7,13 +7,18 @@
                         <?php echo $class_name; ?>
                     </div>
                     <div class="menu-button f-regular-12">
-                        <button>Toán học</button>
-                        <button>Văn học</button>
-                        <button>Sinh học</button>
-                        <button>Địa lý</button>
+                        <?php $list_subject = findSubjectByClass($class_name);
+                        if (sizeof($list_subject) >= 4) {
+                            $total_button = 4;
+                        } else {
+                            $total_button = sizeof($list_subject);
+                        }
+                        for ($i = 0; $i < $total_button; $i++) { ?>
+                            <button><?php echo $list_subject[$i]->subject ?></button>
+                        <?php } ?>
                     </div>
                     <div class="view-all">
-                        <a class="f-regular-13" href="">
+                        <a class="f-regular-13" href="/miny/category.php?class=<?php echo $class_name ?>">
                             Xem tất cả
                             <i class="fas fa-caret-right"></i>
                         </a>
@@ -27,21 +32,21 @@
                         $total_post = sizeof($data_content[array_search($class_name, $list_class)]);
                     }
                     for ($i = 0; $i < $total_post; $i++) { ?>
-                        <div class="post-model">
+                        <div class="post-model" data-location="/miny/detail.php?post=<?php echo $data_content[array_search($class_name, $list_class)][$i]->id ?>">
                             <div class="post-title">
-                                <a href="" class="f-medium-17"><?php echo $data_content[array_search($class_name, $list_class)][$i]->title; ?></a>
+                                <a href="/miny/detail.php?post=<?php echo $data_content[array_search($class_name, $list_class)][$i]->id ?>" class="f-medium-17"><?php echo $data_content[array_search($class_name, $list_class)][$i]->title ?></a>
                             </div>
                             <div class="post-heading d-flex">
                                 <div class="post-author f-medium-12">
-                                    <?php echo $data_content[array_search($class_name, $list_class)][$i]->author; ?>
+                                    <?php echo $data_content[array_search($class_name, $list_class)][$i]->fullname ?>
                                 </div>
                                 <div class="post-info f-regular-13">
-                                    <div><img src="./images/homepage/icon-view.png" alt="icon-view"><?php echo $data_content[array_search($class_name, $list_class)][$i]->view; ?></div>
-                                    <div><img src="./images/homepage/icon-heart.png" alt="icon-like"><?php echo $data_content[array_search($class_name, $list_class)][$i]->like; ?></div>
+                                    <div><img src="./images/homepage/icon-view.png" alt="icon-view"><?php echo $data_content[array_search($class_name, $list_class)][$i]->view_num; ?></div>
+                                    <div><img src="./images/homepage/icon-heart.png" alt="icon-like"><?php echo $data_content[array_search($class_name, $list_class)][$i]->like_num; ?></div>
                                 </div>
                             </div>
                             <div class="post-content f-regular-13">
-                                <?php echo $data_content[array_search($class_name, $list_class)][$i]->content; ?>
+                                <?php echo $data_content[array_search($class_name, $list_class)][$i]->content ?>
                             </div>
                         </div>
                     <?php } ?>

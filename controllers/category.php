@@ -1,19 +1,8 @@
 <?php
-    // Hàm lấy ra các Post thỏa mãn
-    function findPost($post, $post_class, $subject_name) {
-        if ($post->class == $post_class && $post->subject == $subject_name) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    // Xử lí Page hiện ra
+    // Xử lý dữ liệu Page hiện ra
     if (isset($_GET['class']) && isset($_GET['subject'])) {
-        // Nếu có Query, hiển thị trang post đầy đủ
+        // Nếu có Query subject, hiển thị trang post đầy đủ
         $view = "subject";
-        $class = $_GET['class'];
-        $subject = $_GET['subject'];
         // Lấy Page hiện tại
         if (isset($_GET['page'])) {
             $page = ($_GET['page']);
@@ -21,67 +10,105 @@
             $page = 1;
         }
         // Tính số trang cần có cho subject đang xem
-        $data_full_post = array();
-        foreach ($data_post as $post) {
-            if (findPost($post, $class, $subject)) {
-                array_push($data_full_post, $post);
-            }
-        }
-        if (sizeof($data_full_post) % 9 == 0) {
-            $page_button = sizeof($data_full_post) / 9;
+        if (sizeof($all_post) % 9 == 0) {
+            $page_button = sizeof($all_post) / 9;
         } else {
-            $page_button = intval(sizeof($data_full_post) / 9) + 1;
+            $page_button = intval(sizeof($all_post) / 9) + 1;
         }
         // Tính số Post của Page cần load
         $start_number = 9 * ($page - 1);
-        if ((sizeof($data_full_post) - $start_number) >= 9) {
+        if ((sizeof($all_post) - $start_number) >= 9) {
             $post_number = 9;
         } else {
-            $post_number = sizeof($data_full_post) - $start_number;
+            $post_number = sizeof($all_post) - $start_number;
         }
         // Lấy ra số Post đó
-        $data_show_more = array();
+        $data_content = array();
         for ($i = $start_number; $i < $start_number + $post_number; $i++) {
-            array_push($data_show_more, $data_full_post[$i]);
+            array_push($data_content, $all_post[$i]);
         }
-    } else {
+    } elseif (isset($_GET['class'])) {
         // Nếu không có Query, hiển thị trang ban đầu
         $view = "basic";
         $data_content = array();
-        foreach ($list_subject as $subject_name) {
-            $data_content[array_search($subject_name, $list_subject)] = array();
-            foreach ($data_post as $post) {
-                if (findPost($post, $post_class, $subject_name)) {
-                    array_push($data_content[array_search($subject_name, $list_subject)], $post);
+        $subject_check_name = array();
+        foreach ($all_post as $post) {
+            if (!in_array($post->subject, $subject_check_name)) {
+                array_push($subject_check_name, $post->subject);
+                $new_list = array();
+                array_push($new_list, $post);
+                array_push($data_content, $new_list);
+            }
+            elseif (in_array($post->subject, $subject_check_name) && sizeof($data_content[array_search($post->subject, $subject_check_name)]) < 3) {
+                array_push($data_content[array_search($post->subject, $subject_check_name)], $post);
+            }
+            elseif (in_array($post->subject, $subject_check_name) && sizeof($data_content[array_search($post->subject, $subject_check_name)]) >= 3) {
+                $count = 0;
+                foreach ($data_content as $each_data) {
+                    if (sizeof($each_data) > 3) {
+                        $count += 1;
+                    }
+                }
+                if ($count == 11) {
+                    break;
                 }
             }
         }
     }
 
-    // Hàm tạo breadcrumb
-    $breadcrumb = array();
-    function createBreadcrumb($obj, $post) {
-        global $breadcrumb, $data_type;
-        array_push($breadcrumb, $obj);
-        if ($obj == 'trang chủ') {
-            return $breadcrumb;
-        } else {
-            foreach ($post as $type => $value) {
-                if ($value == $obj) {
-                    $type_number = $data_type->$type - 1;
-                    global $type_name;
-                    foreach ($data_type as $type_next => $value1) {
-                        if ($value1 == $type_number) {
-                            $type_name = $type_next;
-                        }
-                    }
-                    if (isset($post->$type_name)) {
-                        return createBreadcrumb($post->$type_name, $post);
-                    } else {
-                        return createBreadcrumb('trang chủ', $post);
+    // Xử lý dữ liệu cho phần Footer
+    $data_footer = array();
+    $data_subject_name = array();
+    foreach ($all_subject as $subject) {
+        if (!in_array($subject->subject, $data_subject_name)) {
+            array_push($data_footer, $subject);
+            array_push($data_subject_name, $subject->subject);
+        }
+        if (sizeof($data_footer) >= 8 && sizeof($data_subject_name) >= 8) {
+            break;
+        }
+    }
+
+    function findClassbySubjectId($subject_id) {
+        global $all_subject, $all_class;
+        foreach ($all_subject as $subject) {
+            if ($subject->id == $subject_id) {
+                foreach ($all_class as $class) {
+                    if ($class->id == $subject->class_id) {
+                        return $class->class;
                     }
                 }
             }
         }
+    }
+
+    // Xử lý dữ liệu cho phần NavBar
+    function findSubjectById($class_id) {
+        global $all_subject;
+        $list_subject = array();
+        foreach ($all_subject as $subject) {
+            if ($subject->class_id == $class_id) {
+                array_push($list_subject, $subject);
+            }
+        }
+        return $list_subject;
+    }
+
+    // Tạo breadcrumb
+    $breadcrumb = array('trang chủ');
+    if (isset($_GET['class'])) {
+        array_push($breadcrumb, $_GET['class']);
+    }
+    if (isset($_GET['subject'])) {
+        array_push($breadcrumb, $_GET['subject']);
+    }
+    if (isset($_GET['post'])) {
+        if  (!in_array($post->class, $breadcrumb)) {
+            array_push($breadcrumb, $post->class);
+        }
+        if  (!in_array($post->subject, $breadcrumb)) {
+            array_push($breadcrumb, $post->subject);
+        }
+        array_push($breadcrumb, $post->title);
     }
 ?>
