@@ -1,5 +1,5 @@
 <?php
-    require_once 'connectDB.php';
+    require_once '../connectDB.php';
     function fetchData($query) {
         global $conn;
         $all_data = mysqli_query($conn, $query);
@@ -11,15 +11,15 @@
     }
 
     $data = array();
-    if (isset($_GET['subjectId'])) {
-        $subject_id = $_GET['subjectId'];
+    if (isset($_GET['subjectid'])) {
+        $subject_id = $_GET['subjectid'];
         $query = "
             SELECT posts.id, title, view_num, like_num, content, fullname, classes.class, subjects.subject
             FROM users, subjects, classes, posts
             WHERE users.id = posts.user_id AND
             classes.id = subjects.class_id AND
             subjects.id = posts.subject_id AND 
-            subjects.id = '$subject_id'
+            subjects.id = $subject_id
             LIMIT 6
         ";
         $data = fetchData($query);

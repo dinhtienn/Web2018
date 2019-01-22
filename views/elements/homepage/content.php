@@ -34,7 +34,7 @@
                         $total_post = sizeof($data_content[$index]);
                     }
                     for ($i = 0; $i < $total_post; $i++) { ?>
-                        <div class="post-model" data-location="/miny/detail.php?post=<?php echo $data_content[array_search($class_name, $list_classes)][$i]->id ?>">
+                        <div class="post-model" data-location="/miny/detail.php?post=<?php echo $data_content[$index][$i]->id ?>">
                             <div class="post-title">
                                 <a href="/miny/detail.php?post=<?php echo $data_content[$index][$i]->id ?>" class="f-medium-17"><?php echo $data_content[$index][$i]->title ?></a>
                             </div>

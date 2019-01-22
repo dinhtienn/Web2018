@@ -15,15 +15,37 @@ for (let i = 0; i < subjectTab.length; i++) {
         }
         subjectTab[i].classList.add('subject-active');
         for (let k = 0; k < tabPost.length; k++) {
-            if (k == parseInt(i/4)) {
+            if (k == parseInt(i/4) + 1) {
                 axios({
                     method: 'GET',
-                    url: `/miny/controllers/contentHomepage.php`,
+                    url: "/miny/controllers/contentHomepage.php",
                     params: {
-                        "subjectId": subjectTab[i].dataset.subjectid,
+                        "subjectid": subjectTab[i].dataset.subjectid,
                     }
-                }).then((data) => {
-                    console.log(data);
+                }).then((response) => {
+                    var posts = response.data;
+                    var tabPostHTML = posts.map(
+                        post => `
+                            <div class="post-model" data-location="/miny/detail.php?post=${ post.id }">
+                                <div class="post-title">
+                                    <a href="/miny/detail.php?post=${ post.id }" class="f-medium-17">${ post.title }</a>
+                                </div>
+                                <div class="post-heading d-flex">
+                                    <div class="post-author f-medium-12">
+                                        ${ post.fullname }
+                                    </div>
+                                    <div class="post-info f-regular-13">
+                                        <div><img src="./assets/images/homepage/icon-view.png" alt="icon-view">${ post.view_num }</div>
+                                        <div><img src="./assets/images/homepage/icon-heart.png" alt="icon-like">${ post.like_num }</div>
+                                    </div>
+                                </div>
+                                <div class="post-content f-regular-13">
+                                    ${ post.content }
+                                </div>
+                            </div>
+                        `
+                    );
+                    tabPost[k].innerHTML = `${tabPostHTML.join("")}`;
                 })
             }
         }

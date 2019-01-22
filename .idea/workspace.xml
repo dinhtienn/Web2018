@@ -2,107 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4420a77-d373-4af1-bc73-24dbca0e2b30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/category.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/detail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/homepage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/homepage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/contentHomepage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testUser/createPost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testUser/deletePost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testUser/editPost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testUser/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testUser/logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testUser/managePost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testUser/signUp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testUser/user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/elements/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/elements/signUp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connectDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/connectDB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/homepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/category.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/detail.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/advertiment.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/footer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/navbar.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/postdetail.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/posts.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/type.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/Roboto-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Bold.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/Roboto-Medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Medium.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/Roboto-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/homepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/banner-mobile.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/banner-mobile.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/banner.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/header-subject.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/header-subject.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/logo-web.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/logo-web.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/all/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/all/search.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/detail/advertiment.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/detail/advertiment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/detail/comment.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/detail/comment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/detail/content.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/detail/content.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/homepage/banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/homepage/banner.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/homepage/icon-all.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/homepage/icon-all.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/homepage/icon-download.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/homepage/icon-download.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/homepage/icon-file.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/homepage/icon-file.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/homepage/icon-heart.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/homepage/icon-heart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/homepage/icon-pc.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/homepage/icon-pc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/homepage/icon-view.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/homepage/icon-view.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/layout/category.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/layout/category.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/layout/detail.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/layout/detail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/layout/homepage.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/layout/homepage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/thumbnail/author-post.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/thumbnail/author-post.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/category.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/homepage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/layoutTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/layoutTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/homepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/analysis/fonts.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/analysis/fonts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/analysis/images.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/analysis/images.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/category/banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/category/banner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/category/contentBasic.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/category/contentBasic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/category/contentSubject.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/category/contentSubject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/category/metaData.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/category/metaData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/category/sideBar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/category/sideBar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/detail/banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/detail/banner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/detail/metaData.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/detail/metaData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/detail/morePost.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/detail/morePost.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/detail/postDetail.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/detail/postDetail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/detail/sideBar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/detail/sideBar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/fakeDiv.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/contentHomepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/contentHomepage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/elements/homepage/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/homepage/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/homepage/metaData.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/homepage/metaData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/homepage/service.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/homepage/service.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/layerOpacity.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/layerOpacity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/mobileHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/mobileHeader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/scrollTop.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/scrollTop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/homepage.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="33" selection-end-column="46" />
+            <state relative-caret-position="26">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -124,26 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/contentHomepage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/common.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="387" column="19" selection-start-line="387" selection-start-column="19" selection-end-line="387" selection-end-column="19" />
+            <state relative-caret-position="134">
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -151,8 +35,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/homepage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+            <state relative-caret-position="54">
+              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+              <folding>
+                <element signature="n#div#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/elements/homepage/content.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="17" column="73" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
+            <state relative-caret-position="234">
+              <caret line="36" column="116" selection-start-line="36" selection-start-column="116" selection-end-line="36" selection-end-column="116" />
             </state>
           </provider>
         </entry>
@@ -242,8 +129,8 @@
         <option value="$PROJECT_DIR$/views/elements/category/banner.php" />
         <option value="$PROJECT_DIR$/assets/js/common.js" />
         <option value="$PROJECT_DIR$/views/homepage.php" />
-        <option value="$PROJECT_DIR$/views/elements/homepage/content.php" />
         <option value="$PROJECT_DIR$/controllers/contentHomepage.php" />
+        <option value="$PROJECT_DIR$/views/elements/homepage/content.php" />
         <option value="$PROJECT_DIR$/assets/js/homepage.js" />
       </list>
     </option>
@@ -395,12 +282,12 @@
       <workItem from="1547957040455" duration="1049000" />
       <workItem from="1548010828000" duration="3919000" />
       <workItem from="1548034199187" duration="35731000" />
-      <workItem from="1548159305460" duration="9628000" />
+      <workItem from="1548159305460" duration="11667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240977000" />
+    <option name="totallyTimeSpent" value="243016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -728,20 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/elements/homepage/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="17" column="73" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="33" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -749,17 +622,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/contentHomepage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        <state relative-caret-position="134">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/elements/homepage/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="36" column="116" selection-start-line="36" selection-start-column="116" selection-end-line="36" selection-end-column="116" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/homepage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        <state relative-caret-position="54">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
