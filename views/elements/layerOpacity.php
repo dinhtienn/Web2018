@@ -1,1 +1,1 @@
-<div class="layer-opacity"></div>
+<div id="layer-opacity"></div>

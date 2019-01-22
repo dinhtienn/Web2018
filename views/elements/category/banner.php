@@ -2,7 +2,7 @@
     <div class="container">
         <div class="breadcrumb f-regular-13">
             <?php for ($i = 0; $i < sizeof($breadcrumb) - 1; $i++) {?>
-                <div><a href=""><?php echo $breadcrumb[$i] ?></a></div>
+                <div><a class="breadcrumb-tag"><?php echo $breadcrumb[$i] ?></a></div>
             <?php }?>
             <div><?php echo $breadcrumb[sizeof($breadcrumb) - 1] ?></div>
         </div>

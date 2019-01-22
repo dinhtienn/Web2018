@@ -5,5 +5,8 @@
     $dbname = 'miny';
 
     $conn = mysqli_connect($hostname, $username, $password, $dbname);
-    mysqli_set_charset($conn,"utf8");
-?>
+    if (!$conn) {
+        echo "Kết nối Database không thành công";
+    } else {
+        mysqli_set_charset($conn,"utf8");
+    }

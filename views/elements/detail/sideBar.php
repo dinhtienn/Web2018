@@ -1,5 +1,5 @@
 <div class="side-bar">
-    <?php if (sizeof($data_related) > 0) {?>
+    <?php if (isset($data_related) && sizeof($data_related) > 0) {?>
         <div class="related">
             <div class="related-heading f-medium-17">
                 Bạn muốn tìm thêm với
@@ -17,7 +17,9 @@
             </div>
         </div>
     <?php } ?>
-    <?php foreach ($all_ad as $ad) {?>
-        <a href="<?php echo $ad->link ?>"><img src="<?php echo $ad->image; ?>" alt="<?php echo $ad->title; ?>"></a>
-    <?php }?>
+    <?php if (isset($all_ads) && sizeof($all_ads) > 0) {
+        foreach ($all_ads as $ad) {?>
+            <a href="<?php echo $ad->link ?>"><img src="<?php echo $ad->image; ?>" alt="<?php echo $ad->title; ?>"></a>
+        <?php }
+    } ?>
 </div>

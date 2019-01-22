@@ -1,1 +1,1 @@
-<button id="scroll-top"><i class="fas fa-angle-up"></i></button>
+<button id="scroll-top" onclick="scrollToTop(150, 5)"><i class="fas fa-angle-up"></i></button>

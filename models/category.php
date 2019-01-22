@@ -1,9 +1,8 @@
 <?php
     require_once 'connectDB.php';
-    // Hàm láy toàn bộ Data từ một bảng cụ thể
-    function fetchAllData($obj) {
+    function fetchData($query) {
         global $conn;
-        $all_data = mysqli_query($conn,"SELECT * FROM $obj");
+        $all_data = mysqli_query($conn, $query);
         $list_data = array();
         while ($result = mysqli_fetch_object($all_data)) {
             array_push($list_data, $result);
@@ -13,43 +12,54 @@
 
     // Lấy dữ liệu Page hiện ra
     if (isset($_GET['class']) && isset($_GET['subject'])) {
-        $class = $_GET['class'];
-        $subject = $_GET['subject'];
-        // Query dữ liệu từ MySQL
-        $class = "'$class'";
-        $subject = "'$subject'";
-        $query = "
-            SELECT posts.id, title, view_num, like_num, content, fullname, classes.class, subjects.subject
-            FROM users, subjects, classes, posts
-            WHERE users.id = posts.user_id AND
-            classes.id = subjects.class_id AND
-            subjects.id = posts.subject_id AND 
-            classes.class = $class AND 
-            subjects.subject = $subject 
-        ";
+        if ($_GET['class'] == 'Mới nhất') {
+            $query_posts = "
+                SELECT posts.id, title, view_num, like_num, content, fullname, classes.class, subjects.subject
+                FROM users, subjects, classes, posts
+                WHERE users.id = posts.user_id AND
+                classes.id = subjects.class_id AND
+                subjects.id = posts.subject_id
+                LIMIT 27
+            ";
+        } else {
+            $class = $_GET['class'];
+            $subject = $_GET['subject'];
+            $query_posts = "
+                SELECT posts.id, title, view_num, like_num, content, fullname, classes.class, subjects.subject
+                FROM users, subjects, classes, posts
+                WHERE users.id = posts.user_id AND
+                classes.id = subjects.class_id AND
+                subjects.id = posts.subject_id AND 
+                classes.class = '$class' AND 
+                subjects.subject = '$subject' 
+            ";
+        }
     } elseif (isset($_GET['class'])) {
         $class = $_GET['class'];
-        // Query dữ liệu từ MySQL
-        $class = "'$class'";
-        $query = "
+        $query_posts = "
             SELECT posts.id, title, view_num, like_num, content, fullname, classes.class, subjects.subject
             FROM users, subjects, classes, posts
             WHERE users.id = posts.user_id AND
             classes.id = subjects.class_id AND
             subjects.id = posts.subject_id AND 
-            classes.class = $class
+            classes.class = '$class'
         ";
     }
 
-    $full_info = mysqli_query($conn, $query);
-    $all_post = array();
-    while ($data = mysqli_fetch_object($full_info)) {
-        array_push($all_post, $data);
-    }
+    $query_classes = "SELECT * FROM classes";
 
-    $all_subject = fetchAllData("subjects");
-    $all_class = fetchAllData("classes");
-    $all_ad = fetchAllData("advertiments");
+    $query_subjects = "
+        SELECT subjects.id, subject, classes.class
+        FROM subjects, classes
+        WHERE subjects.class_id = classes.id
+    ";
 
+    $query_ads = "
+        SELECT * FROM advertiments
+    ";
+
+    $all_classes = fetchData($query_classes);
+    $all_subjects = fetchData($query_subjects);
+    $all_posts = fetchData($query_posts);
+    $all_ads = fetchData($query_ads);
     mysqli_close($conn);
-?>

@@ -5,15 +5,14 @@
 </head>
 <body>
     <?php require_once 'elements/layerOpacity.php'?>
-    <?php require_once 'elements/scrollTop.php' ?>
+    <?php require_once 'elements/scrollTop.php'?>
     <?php require_once 'elements/header.php'?>
     <?php require_once 'elements/mobileHeader.php' ?>
     <?php require_once 'elements/navigation.php'?>
-    <?php require_once 'elements/fakeDiv.php'?>
     <?php require_once 'elements/detail/banner.php'?>
     <?php require_once 'elements/detail/content.php' ?>
     <?php require_once 'elements/footer.php'?>
-    <script src="./js/detail.js"></script>
+    <script src="./assets/js/common.js"></script>
     <div id="fb-root"></div>
     <script>
         (function (d, s, id) {
@@ -24,6 +23,6 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <script src="./js/layoutTest.js"></script>
+    <script src="./assets/js/layoutTest.js"></script>
 </body>
 </html>

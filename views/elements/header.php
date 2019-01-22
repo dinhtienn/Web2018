@@ -1,14 +1,16 @@
-<header class="search">
+<header id="header" class="search">
     <div class="container">
         <!-- Logo + Menu -->
         <div class="header-container-1">
             <div class="logo">
-                <a href="/miny/homepage.php"><img src="./images/all/logo.png" alt=""></a>
+                <a href="/miny/homepage.php"><img src="./assets/images/all/logo.png" alt=""></a>
             </div>
-            <div class="menu f-regular-14">
-                <button href="">
-                    <img src="./images/all/header-subject.png" alt="icon-menu">
-                    <p>Danh mục</p>
+            <div class="user f-regular-16">
+                <button class="loginButton">
+                    Đăng ký
+                </button>
+                <button class="loginButton" onclick="showForm()">
+                    Đăng nhập
                 </button>
             </div>
         </div>

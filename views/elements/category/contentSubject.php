@@ -2,13 +2,11 @@
     <div class="list-post">
         <div class="tab-heading">
             <div class="tab-title f-regular-30">
-                <?php echo $_GET['subject'] ?>
-            </div>
-            <div class="view-all">
-                <a class="f-regular-13" href="">
-                    Xem tất cả
-                    <i class="fas fa-caret-right"></i>
-                </a>
+                <?php if ($_GET['class'] == 'Mới nhất') {
+                    echo $_GET['class'];
+                } else {
+                    echo $_GET['subject'];
+                } ?>
             </div>
         </div>
         <div class="line-orange"></div>
@@ -23,8 +21,8 @@
                             <?php echo $data_content[$i]->fullname ?>
                         </div>
                         <div class="post-info f-regular-13">
-                            <div><img src="./images/homepage/icon-view.png" alt="icon-view"><?php echo $data_content[$i]->view_num ?></div>
-                            <div><img src="./images/homepage/icon-heart.png" alt="icon-like"><?php echo $data_content[$i]->like_num ?></div>
+                            <div><img src="./assets/images/homepage/icon-view.png" alt="icon-view"><?php echo $data_content[$i]->view_num ?></div>
+                            <div><img src="./assets/images/homepage/icon-heart.png" alt="icon-like"><?php echo $data_content[$i]->like_num ?></div>
                         </div>
                     </div>
                     <div class="post-content f-regular-13">

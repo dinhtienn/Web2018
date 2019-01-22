@@ -6,7 +6,7 @@
         <div id="service-info" class="d-flex">
             <div class="service-1" style="width: 29%">
                 <div class="service-icon">
-                    <img src="./images/homepage/icon-file.png" alt="icon-file">
+                    <img src="./assets/images/homepage/icon-file.png" alt="icon-file">
                 </div>
                 <div class="service-content">
                     <div class="content-heading f-regular-20">Tài nguyên học tập miễn phí</div>
@@ -15,7 +15,7 @@
             </div>
             <div class="service-2" style="width: 44%">
                 <div class="service-icon">
-                    <img src="./images/homepage/icon-download.png" alt="icon-download">
+                    <img src="./assets/images/homepage/icon-download.png" alt="icon-download">
                 </div>
                 <div class="service-content" style="padding: 0px 65px">
                     <div class="content-heading f-regular-20">Nội dung cập nhật liên tục</div>
@@ -24,7 +24,7 @@
             </div>
             <div class="service-3" style="width: 27%">
                 <div class="service-icon">
-                    <img src="./images/homepage/icon-pc.png" alt="icon-pc">
+                    <img src="./assets/images/homepage/icon-pc.png" alt="icon-pc">
                 </div>
                 <div class="service-content">
                     <div class="content-heading f-regular-20">Giao diện thân thiện</div>

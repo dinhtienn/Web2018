@@ -1,5 +1,5 @@
 <div class="more-post">
-    <?php if (sizeof($data_more_post) > 0) {?>
+    <?php if (isset($data_more_post) && sizeof($data_more_post) > 0) {?>
         <div class="tab-heading">
             <div class="tab-title f-regular-30">
                 Có thể bạn quan tâm
@@ -28,8 +28,8 @@
                             <?php echo $data_more_post[$i]->fullname ?>
                         </div>
                         <div class="post-info f-regular-13">
-                            <div><img src="./images/homepage/icon-view.png" alt="icon-view"><?php echo $data_more_post[$i]->view_num ?></div>
-                            <div><img src="./images/homepage/icon-heart.png" alt="icon-like"><?php echo $data_more_post[$i]->like_num ?></div>
+                            <div><img src="./assets/images/homepage/icon-view.png" alt="icon-view"><?php echo $data_more_post[$i]->view_num ?></div>
+                            <div><img src="./assets/images/homepage/icon-heart.png" alt="icon-like"><?php echo $data_more_post[$i]->like_num ?></div>
                         </div>
                     </div>
                     <div class="post-content f-regular-13">
