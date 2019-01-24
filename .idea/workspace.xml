@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4420a77-d373-4af1-bc73-24dbca0e2b30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/js/userHome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/userDeletePost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/elements/users/mainHome.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/elements/users/postCreate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/elements/users/postManagement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/elements/users/update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/elements/users/userInformation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/userHome.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/userHome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/userHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/userHome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/elements/users/body.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/elements/users/body.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/userHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/userHome.php" afterDir="false" />
-    </list>
+    <list default="true" id="f4420a77-d373-4af1-bc73-24dbca0e2b30" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/userHome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="122" column="38" selection-start-line="122" selection-start-column="38" selection-end-line="122" selection-end-column="38" />
+            <state relative-caret-position="276">
+              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
             </state>
           </provider>
         </entry>
@@ -335,12 +321,12 @@
       <workItem from="1548034199187" duration="35731000" />
       <workItem from="1548159305460" duration="16119000" />
       <workItem from="1548206870222" duration="37052000" />
-      <workItem from="1548337464570" duration="10946000" />
+      <workItem from="1548337464570" duration="11031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295466000" />
+    <option name="totallyTimeSpent" value="295551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -695,8 +681,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/userHome.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="122" column="38" selection-start-line="122" selection-start-column="38" selection-end-line="122" selection-end-column="38" />
+        <state relative-caret-position="276">
+          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
         </state>
       </provider>
     </entry>
