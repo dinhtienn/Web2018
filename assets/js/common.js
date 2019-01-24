@@ -65,29 +65,31 @@ for (let i = 0; i < subMenu.length; i++) {
 }
 
 // Scroll to Top
-var scrollTopButton = document.getElementById("scroll-top");
-var html = document.documentElement;
+if (document.getElementById("scroll-top")) {
+    var scrollTopButton = document.getElementById("scroll-top");
+    var html = document.documentElement;
 
-window.onscroll = function() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollTopButton.style.display = "block";
-    } else {
-        scrollTopButton.style.display = "none";
-    }
-};
-
-function scrollToTop(totalTime, easingPower) {
-    var timeLeft = totalTime;
-    var scrollByPixel = setInterval(function () {
-        var percentSpent = (totalTime - timeLeft) / totalTime;
-        if (timeLeft >= 0) {
-            var newScrollTop = html.scrollTop * (1 - Math.pow(percentSpent, easingPower));
-            html.scrollTop = newScrollTop;
-            timeLeft--;
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopButton.style.display = "block";
         } else {
-            clearInterval(scrollByPixel);
+            scrollTopButton.style.display = "none";
         }
-    }, 1);
+    };
+
+    function scrollToTop(totalTime, easingPower) {
+        var timeLeft = totalTime;
+        var scrollByPixel = setInterval(function () {
+            var percentSpent = (totalTime - timeLeft) / totalTime;
+            if (timeLeft >= 0) {
+                var newScrollTop = html.scrollTop * (1 - Math.pow(percentSpent, easingPower));
+                html.scrollTop = newScrollTop;
+                timeLeft--;
+            } else {
+                clearInterval(scrollByPixel);
+            }
+        }, 1);
+    }
 }
 
 // Border in Footer Menu Tab
@@ -109,45 +111,75 @@ for (let i = 0; i < postModel.length; i++) {
     }
 }
 
-// Login
-var formContainer = document.getElementsByClassName('login-container')[0];
-var loginForm = document.getElementsByClassName('login-form')[0];
-var closeFormButton = document.getElementsByClassName('close-form')[0];
-
-function showForm() {
-    formContainer.style.display = "block";
-    formContainer.style.background = "rgba(94, 120, 153, 0.9)";
-    document.getElementsByTagName('body')[0].style.overflow = "hidden";
-    setTimeout(function() {
-        loginForm.style.opacity = "1.0"
-    }, 100);
-}
-
-function closingForm(value) {
-    if (value == true) {
-        loginForm.style.opacity = "0";
-        setTimeout(function() {
-            formContainer.style.display = "none";
-            formContainer.style.background = "#ffffff";
-            document.getElementsByTagName('body')[0].style.overflow = "unset";
-        }, 200);
+// Click on MenuItems
+var menuItem = document.getElementsByClassName('menu-item');
+for (let i = 0; i < menuItem.length; i++) {
+    menuItem[i].onclick = function () {
+        window.location.href = menuItem[i].dataset.location;
     }
 }
 
-function closeForm(event) {
-    let isClose = false;
-    if (event.clientX < loginForm.offsetLeft
-        || event.clientX > loginForm.offsetLeft + loginForm.clientWidth
-        || event.clientY < loginForm.offsetTop
-        || event.clientY > loginForm.offsetTop + loginForm.clientHeight
-        || (
-            event.clientX > closeFormButton.offsetLeft + loginForm.offsetLeft
-            && event.clientX < closeFormButton.offsetLeft + loginForm.offsetLeft + closeFormButton.clientWidth
-            && event.clientY > closeFormButton.offsetTop + loginForm.offsetTop
-            && event.clientY < closeFormButton.offsetTop + loginForm.offsetTop + closeFormButton.clientHeight
-        )
-    ) { isClose = true }
-    closingForm(isClose);
+// Login
+var formContainer = document.getElementsByClassName('login-container');
+var loginForm = document.getElementsByClassName('login-form');
+var closeFormButton = document.getElementsByClassName('close-form');
+var loginButton = document.getElementsByClassName('login-button');
+
+for (let i = 0; i < loginButton.length; i++) {
+    loginButton[i].onclick = function() {
+        formContainer[i].style.display = "block";
+        formContainer[i].style.background = "rgba(94, 120, 153, 0.9)";
+        document.getElementsByTagName('body')[0].style.overflow = "hidden";
+        setTimeout(function() {
+            loginForm[i].style.opacity = "1.0"
+        }, 100);
+    }
+}
+
+for (let i = 0; i < closeFormButton.length; i++) {
+    formContainer[i].onclick = function(event) {
+        if (event.clientX < loginForm[i].offsetLeft
+            || event.clientX > loginForm[i].offsetLeft + loginForm[i].clientWidth
+            || event.clientY < loginForm[i].offsetTop
+            || event.clientY > loginForm[i].offsetTop + loginForm[i].clientHeight
+            || (
+                event.clientX > closeFormButton[i].offsetLeft + loginForm[i].offsetLeft
+                && event.clientX < closeFormButton[i].offsetLeft + loginForm[i].offsetLeft + closeFormButton[i].clientWidth
+                && event.clientY > closeFormButton[i].offsetTop + loginForm[i].offsetTop
+                && event.clientY < closeFormButton[i].offsetTop + loginForm[i].offsetTop + closeFormButton[i].clientHeight
+            )
+        ) {
+            loginForm[i].style.opacity = "0";
+            setTimeout(function() {
+                formContainer[i].style.display = "none";
+                formContainer[i].style.background = "#ffffff";
+                document.getElementsByTagName('body')[0].style.overflow = "unset";
+            }, 200);
+        }
+    }
+}
+
+var openOther = document.getElementsByClassName('open-other');
+
+for (let i = 0; i < openOther.length; i++) {
+    openOther[i].onclick = function() {
+        // Closing
+        loginForm[i].style.opacity = "0";
+        setTimeout(function() {
+            formContainer[i].style.display = "none";
+            formContainer[i].style.background = "#ffffff";
+            document.getElementsByTagName('body')[0].style.overflow = "unset";
+        }, 200);
+        // Opening
+        setTimeout(function() {
+            formContainer[1-i].style.display = "block";
+            formContainer[1-i].style.background = "rgba(94, 120, 153, 0.9)";
+            document.getElementsByTagName('body')[0].style.overflow = "hidden";
+            setTimeout(function() {
+                loginForm[1-i].style.opacity = "1.0"
+            }, 100);
+        }, 200)
+    }
 }
 
 // Link breadcrumbs
@@ -165,4 +197,14 @@ for (let i = 0; i < breadcrumbTags.length; i++) {
             window.location.href = `/miny/category.php?class=${breadcrumbTags[1].innerHTML}&subject=${breadcrumbTags[2].innerHTML}&page=1`;
         }
     }
+}
+
+// Click Logout
+document.getElementById('logout-button').onclick = function() {
+    window.location.href = `${document.getElementById('logout-button').dataset.location}`;
+}
+
+// Click User Homepage
+document.getElementById('user-homepage').onclick = function () {
+    window.location.href = `${document.getElementById('user-homepage').dataset.location}`;
 }

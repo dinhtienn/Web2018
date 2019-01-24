@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php require_once 'elements/category/metaData.php' ?>
+    <?php require_once 'elements/metaData.php' ?>
+    <link rel="stylesheet" href="./assets/css/category.css">
 </head>
 <body>
     <?php require_once 'elements/layerOpacity.php'?>

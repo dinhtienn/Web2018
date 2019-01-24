@@ -48,22 +48,10 @@
         posts.id != $post_id
     ";
 
-    $query_classes = "SELECT * FROM classes";
-
-    $query_subjects = "
-        SELECT subjects.id, subject, classes.class
-        FROM subjects, classes
-        WHERE subjects.class_id = classes.id
-    ";
-
-    $query_ads = "
-        SELECT * FROM advertiments
-    ";
-
+    require_once 'navigation.php';
+    require_once 'footer.php';
+    require_once 'advertiments.php';
     $data_related = fetchData($query_related);
     $data_more_post = fetchData($query_more_post);
-    $all_classes = fetchData($query_classes);
-    $all_subjects = fetchData($query_subjects);
-    $all_ads = fetchData($query_ads);
 
     mysqli_close($conn);

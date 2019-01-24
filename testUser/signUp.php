@@ -20,12 +20,24 @@
                     ";
                     $create = mysqli_query($conn, $query_create);
                     if ($create) {
-                        echo "Thêm thành công";
+                        echo "
+                            <script>
+                                alert('Đăng ký thành công');
+                            </script>
+                        ";
                     } else {
-                        echo "Thêm không thành công";
+                        echo "
+                            <script>
+                                alert('Đăng ký không thành công');
+                            </script>
+                        ";
                     }
                 } else {
-                    echo "Tên đăng nhập đã tồn tại";
+                    echo "
+                        <script>
+                            alert('Tên đăng nhập đã tồn tại');
+                        </script>
+                    ";
                 }
             }
         }

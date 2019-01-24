@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php require_once 'elements/homepage/metaData.php'?>
+    <?php require_once 'elements/metaData.php'?>
+    <link rel="stylesheet" href="./assets/css/homepage.css">
 </head>
 <body>
+    <?php require_once 'elements/signup.php' ?>
     <?php require_once 'elements/login.php'?>
     <?php require_once 'elements/layerOpacity.php'?>
     <?php require_once 'elements/scrollTop.php'?>

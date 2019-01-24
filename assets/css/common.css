@@ -27,18 +27,20 @@ body {
 /* Login */
 .login-container {
     background: #ffffff;
-    padding: 10% 0;
+    height: 100%;
     transition: 0.2s ease-in;
     transition: 0.1s ease-out;
     display: none;
     position: absolute;
     width: 100%;
     z-index: 5;
+    padding-top: 60px;
 }
 
 .login-form {
     margin: 0 auto;
     width: 28%;
+    min-width: 350px;
     background: #ffffff;
     border-radius: 3px;
     box-shadow: 0 7px 15px rgba(0, 0, 0, 0.35);
@@ -459,7 +461,7 @@ nav .sub-menu .subject .subject-column1 div a,
     background: #ffffff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     transition: 0.2s ease-in-out;
 }

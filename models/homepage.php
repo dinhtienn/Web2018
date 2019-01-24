@@ -10,14 +10,6 @@
         return $list_data;
     }
 
-    $query_classes = "SELECT * FROM classes";
-
-    $query_subjects = "
-        SELECT subjects.id, subject, classes.class
-        FROM subjects, classes
-        WHERE subjects.class_id = classes.id
-    ";
-
     $query_posts = "
         SELECT posts.id, title, view_num, like_num, content, fullname, classes.class, subjects.subject
         FROM users, subjects, classes, posts
@@ -26,10 +18,10 @@
         subjects.id = posts.subject_id
     ";
 
-    $all_classes = fetchData($query_classes);
-    $all_subjects = fetchData($query_subjects);
+    require_once 'navigation.php';
+    require_once 'footer.php';
     $all_posts = fetchData($query_posts);
 
     $list_classes = array("Mới nhất", "lớp 9", "lớp 8");
 
-    mysqli_close($conn);
+

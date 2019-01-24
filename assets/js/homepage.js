@@ -46,6 +46,13 @@ for (let i = 0; i < subjectTab.length; i++) {
                         `
                     );
                     tabPost[k].innerHTML = `${tabPostHTML.join("")}`;
+                    // Click on PostModel
+                    var postModel = document.getElementsByClassName('post-model');
+                    for (let h = 0; h < postModel.length; h++) {
+                        postModel[h].onclick = function () {
+                            window.location.href = postModel[h].dataset.location;
+                        }
+                    }
                 })
             }
         }

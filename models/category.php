@@ -46,20 +46,8 @@
         ";
     }
 
-    $query_classes = "SELECT * FROM classes";
-
-    $query_subjects = "
-        SELECT subjects.id, subject, classes.class
-        FROM subjects, classes
-        WHERE subjects.class_id = classes.id
-    ";
-
-    $query_ads = "
-        SELECT * FROM advertiments
-    ";
-
-    $all_classes = fetchData($query_classes);
-    $all_subjects = fetchData($query_subjects);
+    require_once 'navigation.php';
+    require_once 'footer.php';
+    require_once 'advertiments.php';
     $all_posts = fetchData($query_posts);
-    $all_ads = fetchData($query_ads);
     mysqli_close($conn);

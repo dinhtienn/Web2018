@@ -6,12 +6,21 @@
                 <a href="/miny/homepage.php"><img src="./assets/images/all/logo.png" alt=""></a>
             </div>
             <div class="user f-regular-16">
-                <button class="loginButton">
-                    Đăng ký
-                </button>
-                <button class="loginButton" onclick="showForm()">
-                    Đăng nhập
-                </button>
+                <?php if (!isset($_SESSION['username'])) {?>
+                    <button class="login-button">
+                        Đăng ký
+                    </button>
+                    <button class="login-button">
+                        Đăng nhập
+                    </button>
+                <?php } else { ?>
+                    <button id="user-homepage" data-location="userHome.php">
+                        Trang cá nhân
+                    </button>
+                    <button id="logout-button" data-location="controllers/userLogout.php">
+                        Đăng xuất
+                    </button>
+                <?php } ?>
             </div>
         </div>
         <!-- Search -->
