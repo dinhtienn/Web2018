@@ -13,6 +13,7 @@
         require_once 'elements/users/body.php';
         require_once 'elements/footer.php' ?>
         <script src="./assets/js/common.js"></script>
+        <script src="./assets/js/userHome.js"></script>
         <script src="./assets/js/layoutTest.js"></script>
     <?php } else {
         header('location: homepage.php');

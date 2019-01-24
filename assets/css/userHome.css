@@ -8,7 +8,8 @@
 
 /* User Homepage Menu */
 #user-menu {
-    position: absolute;
+    margin-top: 107px;
+    position: fixed;
     z-index: 1;
     top: 30px;
     list-style: none;
@@ -53,6 +54,7 @@
 
 #user-menu li:hover {
     border: #ff9900 solid 3px;
+    cursor: pointer;
 }
 
 #user-menu li:hover a {
@@ -60,11 +62,14 @@
 }
 
 .content-container {
-    padding: 30px 0;
     padding-left: 25%;
 }
 
 /* Thông tin cá nhân */
+#user-infomation {
+    padding: 30px 0;
+}
+
 #user-infomation .update-button {
     margin: 0 auto;
     display: flex;
@@ -130,8 +135,9 @@
 #post-create form {
     border-radius: 5px;
     box-shadow: 0 0 15px #999999;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
+    background: #f1f1f1;
 }
 
 #post-create .post-banner {
@@ -174,7 +180,7 @@
     background: #ffffff;
     padding: 10px;
     border-radius: 5px;
-    border: #ffbb00 solid 2px;
+    border: #ff9900 solid 2px;
     outline: none;
 }
 
@@ -213,14 +219,18 @@
 
 /* Quản lý bài viết */
 #post-management {
-    padding: 50px 0;
+    height: 350px;
+    overflow: auto;
+    box-shadow: 0 0 10px #999999;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 #post-management table {
     border-collapse: collapse;
     border: 1px solid #ccc;
-    box-shadow: 0 0 10px #ccc;
-    margin: 0 auto;
 }
 
 table tr {
@@ -242,11 +252,64 @@ table th, table td {
     vertical-align: top;
 }
 
-table th:first-letter {
+table th:first-letter, table td:first-letter {
     text-transform: capitalize;
+}
+
+table th:first-child {
+    width: 20%;
+}
+
+table th:nth-child(3),
+table th:nth-child(4),
+table th:last-child {
+    width: 10%;
+}
+
+table th:nth-child(2) {
+    width: 8%;
+}
+
+table th:nth-child(5) {
+    width: 12%;
+}
+
+table th:nth-child(6) {
+    width: 30%;
 }
 
 .table-heading {
     color: #ffffff !important;
     background-color: #26af92 !important;
+}
+
+table a {
+    text-decoration: none;
+    color: #26af92;
+    transition: 0.2s ease-in-out;
+    display: block;
+    padding: 2px 0;
+}
+
+table a:hover {
+    cursor: pointer;
+    color: #ff9900;
+}
+
+table tr:hover {
+    background: #dddddd;
+    cursor: pointer;
+}
+
+.content-column {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1em;
+    max-height: 4.25em;
+}
+
+.update-container {
+    padding-left: 25%;
 }

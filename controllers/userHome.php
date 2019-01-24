@@ -102,4 +102,73 @@
         }
     }
 
+    // Xử lý cập nhật bài viết
+    if ( isset($_GET['update']) ) {
+        $post_id = $_GET['update'];
+        $query_update_post = "
+                SELECT posts.id, title, classes.class, subjects.subject, content
+                FROM posts, classes, subjects
+                WHERE posts.subject_id = subjects.id AND
+                subjects.class_id = classes.id AND
+                posts.id = $post_id
+            ";
+        $post = fetchOneData($query_update_post);
+        if (!$post) {
+            echo "
+                <script>
+                    alert('Không tìm thấy bài viết!');
+                </script>
+            ";
+        }
+        if (isset($_POST['submitUpdate'])) {
+            $title = $_POST['title'];
+            $class = $_POST['class'];
+            $subject = $_POST['subject'];
+            $content = $_POST['content'];
+            $query_class = "
+                SELECT * FROM classes WHERE class = '$class'
+            ";
+
+            $class = fetchOneData($query_class);
+            if ($class) {
+                $class_id = $class->id;
+            } else {
+                echo "
+                    <script>
+                        alert('Tên lớp không thỏa mãn');
+                    </script>
+                ";
+            }
+
+            $query_subject = "
+                SELECT * FROM subjects WHERE class_id = '$class_id' AND subject = '$subject'
+            ";
+            $subject = fetchOneData($query_subject);
+            if ($subject) {
+                $subject_id = $subject->id;
+            } else {
+                echo "
+                    <script>
+                        alert('Tên chủ đề không thỏa mãn');
+                    </script>
+                ";
+            }
+
+            $query_update = "
+                UPDATE posts SET title = '$title', subject_id = $subject_id, content = '$content'
+                WHERE id = $post_id
+            ";
+            $update = mysqli_query($conn, $query_update);
+            if ($update) {
+                header('location: userHome.php');
+            } else {
+                echo "
+                    <script>
+                        alert('Cập nhật không thành công');
+                    </script>
+                ";
+            }
+        }
+    }
+
     mysqli_close($conn);
