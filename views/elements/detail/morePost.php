@@ -19,7 +19,7 @@
                 $show_post = 6;
             }
             for ($i = 0; $i < $show_post; $i++) {?>
-                <div class="post-model" data-location="/miny/detail.php?post=<?php echo $data_more_post[$i]->id ?>">
+                <div class="post-model" onclick="directTo('/miny/detail.php?post=<?php echo $data_more_post[$i]->id ?>')">
                     <div class="post-title">
                         <a href="/miny/detail.php?post=<?php echo $data_more_post[$i]->id ?>" class="f-medium-17"><?php echo $data_more_post[$i]->title ?></a>
                     </div>

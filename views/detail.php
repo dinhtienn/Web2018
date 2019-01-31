@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="./assets/css/detail.css">
 </head>
 <body>
+    <?php require_once 'elements/signup.php' ?>
+    <?php require_once 'elements/login.php'?>
     <?php require_once 'elements/layerOpacity.php'?>
     <?php require_once 'elements/scrollTop.php'?>
     <?php require_once 'elements/header.php'?>
@@ -13,6 +15,7 @@
     <?php require_once 'elements/detail/banner.php'?>
     <?php require_once 'elements/detail/content.php' ?>
     <?php require_once 'elements/footer.php'?>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./assets/js/common.js"></script>
     <div id="fb-root"></div>
     <script>

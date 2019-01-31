@@ -12,7 +12,7 @@
         <div class="line-orange"></div>
         <div class="tab-post">
             <?php for ($i = 0; $i < sizeof($data_content); $i++) {?>
-                <div class="post-model" data-location="/miny/detail.php?post=<?php echo $data_content[$i]->id ?>">
+                <div class="post-model" onclick="directTo('/miny/detail.php?post=<?php echo $data_content[$i]->id ?>')">
                     <div class="post-title">
                         <a href="/miny/detail.php?post=<?php echo $data_content[$i]->id ?>" class="f-medium-17"><?php echo $data_content[$i]->title ?></a>
                     </div>

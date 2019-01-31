@@ -18,14 +18,15 @@ for (let i = 0; i < subjectTab.length; i++) {
             if (k == parseInt(i/4) + 1) {
                 axios({
                     method: 'GET',
-                    url: "/miny/controllers/contentHomepage.php",
+                    url: "/miny/controllers/contentHomepageAPI.php",
                     params: {
                         "subjectid": subjectTab[i].dataset.subjectid,
                     }
                 }).then((response) => {
-                    var posts = response.data;
-                    var tabPostHTML = posts.map(
-                        post => `
+                    if (response.data) {
+                        var posts = response.data;
+                        var tabPostHTML = posts.map(
+                            post => `
                             <div class="post-model" data-location="/miny/detail.php?post=${ post.id }">
                                 <div class="post-title">
                                     <a href="/miny/detail.php?post=${ post.id }" class="f-medium-17">${ post.title }</a>
@@ -44,16 +45,10 @@ for (let i = 0; i < subjectTab.length; i++) {
                                 </div>
                             </div>
                         `
-                    );
-                    tabPost[k].innerHTML = `${tabPostHTML.join("")}`;
-                    // Click on PostModel
-                    var postModel = document.getElementsByClassName('post-model');
-                    for (let h = 0; h < postModel.length; h++) {
-                        postModel[h].onclick = function () {
-                            window.location.href = postModel[h].dataset.location;
-                        }
+                        );
+                        tabPost[k].innerHTML = `${tabPostHTML.join("")}`;
                     }
-                })
+                }).catch(error => console.log(error));
             }
         }
     }

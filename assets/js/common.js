@@ -3,22 +3,18 @@ var layerOpacity = document.getElementById("layer-opacity");
 var subject = document.getElementsByClassName("subject");
 let body = document.getElementsByTagName("body")[0];
 
-for (i = 0; i < subMenu.length; i++) {
-    if (i != 0) {
-        if (window.outerWidth > 768) {
+if (window.outerWidth > 768) {
+    if (subMenu.length > 1) {
+        for (i = 1; i < subMenu.length; i++) {
             subMenu[i].style.marginLeft = "-1px";
         }
     }
-}
 
-function menuAppear() {
-    if (window.outerWidth > 768) {
+    function menuAppear() {
         layerOpacity.style.height = body.clientHeight + "px";
     }
-}
 
-function menuDisappear() {
-    if (window.outerWidth > 768) {
+    function menuDisappear() {
         layerOpacity.style.height = "0px";
     }
 }
@@ -39,6 +35,10 @@ function isHidden() {
     setTimeout(function() {
         layerOpacity.style.height = "0";
     }, 1000);
+}
+
+function directTo(place) {
+    window.location.href = place;
 }
 
 for (let i = 0; i < subMenu.length; i++) {
@@ -94,28 +94,12 @@ if (document.getElementById("scroll-top")) {
 
 // Border in Footer Menu Tab
 var footerMenuItem = document.getElementsByClassName("footer-menu-item");
-for (i = 0; i < footerMenuItem.length; i++) {
-    if (i != 0 && i != footerMenuItem.length - 1) {
+
+if (footerMenuItem.length > 1) {
+    footerMenuItem[1].classList.add('border-footer');
+    for (i = 2; i < footerMenuItem.length - 1; i++) {
         footerMenuItem[i].classList.add('border-footer');
-        if (i != 1) {
-            footerMenuItem[i].style.marginLeft = "-1px";
-        }
-    }
-}
-
-// Click on PostModel
-var postModel = document.getElementsByClassName('post-model');
-for (let i = 0; i < postModel.length; i++) {
-    postModel[i].onclick = function () {
-        window.location.href = postModel[i].dataset.location;
-    }
-}
-
-// Click on MenuItems
-var menuItem = document.getElementsByClassName('menu-item');
-for (let i = 0; i < menuItem.length; i++) {
-    menuItem[i].onclick = function () {
-        window.location.href = menuItem[i].dataset.location;
+        footerMenuItem[i].style.marginLeft = "-1px";
     }
 }
 
@@ -207,4 +191,28 @@ document.getElementById('logout-button').onclick = function() {
 // Click User Homepage
 document.getElementById('user-homepage').onclick = function () {
     window.location.href = `${document.getElementById('user-homepage').dataset.location}`;
+}
+
+// Searching
+const searchBar = document.getElementById('search');
+var searchContent = document.getElementsByClassName('search-content')[0];
+searchBar.oninput = function () {
+    axios({
+        method: 'GET',
+        url: "/miny/controllers/searchPostAPI.php",
+        params: {
+            "keyword": searchBar.value,
+        }
+    }).then(response => {
+        if (response.data && response.data.length > 0) {
+            var posts = response.data;
+            var postHTML = posts.map(
+                post => `<a><p>${ post['title'] }</p></a>`
+            );
+            searchContent.innerHTML = `${postHTML.join("")}`;
+        }
+        if (searchBar.value.length < 1 || response.data.length < 1) {
+            searchContent.innerHTML = ``;
+        }
+    }).catch(error => { console.log(error) });
 }

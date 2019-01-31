@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -245,6 +246,48 @@ header .header-container-2 .search-container input#search {
     background: #e8ecf3;
     outline: none;
     transition: 0.3s ease-in-out;
+    z-index: 2;
+}
+
+header .header-container-2 .search-container .search-content {
+    position: absolute;
+    margin-top: 47px;
+    background: transparent;
+    z-index: 1;
+    border-radius: 20px;
+    width: 100%;
+}
+
+header .header-container-2 .search-container .search-content a {
+    display: block;
+    background: #ffffff;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #555555;
+    transition: 0.2s ease-in-out;
+}
+
+header .header-container-2 .search-container .search-content a:hover {
+    cursor: pointer;
+    color: #26af92;
+}
+
+header .header-container-2 .search-container .search-content a p {
+    border-bottom: #26af92 solid 1px;
+    padding: 5px 0;
+}
+
+header .header-container-2 .search-container .search-content a p::first-letter {
+    text-transform: capitalize;
+}
+
+header .header-container-2 .search-container .search-content a:last-child p {
+    border: none;
+}
+
+header .header-container-2 .search-container .search-content a:last-child {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 header .header-container-2 .search-container .icon {
@@ -253,6 +296,7 @@ header .header-container-2 .search-container .icon {
     margin-top: 13px;
     color: #7088a9;
     transition: 0.2s ease-in-out;
+    z-index: 2;
 }
 
 header .header-container-2 .search-container input#search:focus {

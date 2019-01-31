@@ -20,12 +20,12 @@
                         <div class="subject f-regular-13">
                             <div class="subject-column1">
                                 <?php for ($i = 0; $i < sizeof($list_subjects) - intval(sizeof($list_subjects) / 2); $i++) { ?>
-                                    <div class="menu-item" data-location="/miny/category.php?class=<?php echo $class->class ?>&subject=<?php echo $list_subjects[$i]->subject ?>&page=1"><a href="/miny/category.php?class=<?php echo $class->class ?>&subject=<?php echo $list_subjects[$i]->subject ?>&page=1"><?php echo $list_subjects[$i]->subject; ?></a></div>
+                                    <div class="menu-item" onclick="directTo('/miny/category.php?class=<?php echo $class->class ?>&subject=<?php echo $list_subjects[$i]->subject ?>&page=1')"><a href="/miny/category.php?class=<?php echo $class->class ?>&subject=<?php echo $list_subjects[$i]->subject ?>&page=1"><?php echo $list_subjects[$i]->subject; ?></a></div>
                                 <?php } ?>
                             </div>
                             <div class="subject-column2">
                                 <?php for ($i = intval(sizeof($list_subjects) / 2) + 1; $i < sizeof($list_subjects); $i++) { ?>
-                                    <div class="menu-item" data-location="/miny/category.php?class=<?php echo $class->class ?>&subject=<?php echo $list_subjects[$i]->subject ?>&page=1"><a href="/miny/category.php?class=<?php echo $class->class ?>&subject=<?php echo $list_subjects[$i]->subject ?>&page=1"><?php echo $list_subjects[$i]->subject; ?></a></div>
+                                    <div class="menu-item" onclick="directTo('/miny/category.php?class=<?php echo $class->class ?>&subject=<?php echo $list_subjects[$i]->subject ?>&page=1')"><a href="/miny/category.php?class=<?php echo $class->class ?>&subject=<?php echo $list_subjects[$i]->subject ?>&page=1"><?php echo $list_subjects[$i]->subject; ?></a></div>
                                 <?php } ?>
                             </div>
                             <?php $class_split = explode(" ", $class->class); ?>

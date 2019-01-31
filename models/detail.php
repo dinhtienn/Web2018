@@ -23,7 +23,9 @@
             posts.id = $post_id
         ";
     }
-    $post = fetchData($query_detail)[0];
+    if (sizeof(fetchData($query_detail)) > 0) {
+        $post = fetchData($query_detail)[0];
+    }
 
     // Lấy dữ liệu cho phần Related
     $query_related = "

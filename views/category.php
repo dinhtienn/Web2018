@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="./assets/css/category.css">
 </head>
 <body>
+    <?php require_once 'elements/signup.php' ?>
+    <?php require_once 'elements/login.php'?>
     <?php require_once 'elements/layerOpacity.php'?>
     <?php require_once 'elements/scrollTop.php'?>
     <?php require_once 'elements/header.php'?>

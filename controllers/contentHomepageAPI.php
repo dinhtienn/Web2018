@@ -23,6 +23,8 @@
             LIMIT 6
         ";
         $data = fetchData($query);
-        echo json_encode($data);
+        if ($data) {
+            echo json_encode($data);
+        }
     }
     mysqli_close($conn);

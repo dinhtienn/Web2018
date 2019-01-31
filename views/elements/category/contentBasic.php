@@ -21,7 +21,7 @@
                         $show_post = sizeof($list_posts);
                     }
                     for ($i = 0; $i < $show_post; $i++) {?>
-                        <div class="post-model" data-location="/miny/detail.php?post=<?php echo $list_posts[$i]->id ?>">
+                        <div class="post-model" onclick="directTo('/miny/detail.php?post=<?php echo $list_posts[$i]->id ?>')">
                             <div class="post-title">
                                 <a href="/miny/detail.php?post=<?php echo $list_posts[$i]->id ?>" class="f-medium-17"><?php echo $list_posts[$i]->title ?></a>
                             </div>

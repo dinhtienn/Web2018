@@ -28,6 +28,9 @@
             <div class="search-container">
                 <i class="icon fas fa-search"></i>
                 <input class="f-regular-14" type="text" id="search" placeholder="Tìm kiếm câu hỏi">
+                <div class="search-content f-regular-14">
+
+                </div>
             </div>
         </div>
     </div>
