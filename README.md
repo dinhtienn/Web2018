@@ -46,4 +46,3 @@ Thực hiện bởi [Nguyễn Đình Tiến](https://github.com/dinhtien12298)
 
 [Detail](https://dinhtien12298.github.io/web2018/detail.php)
 
-![alt](http://https://drive.google.com/open?id=1FJdwnt6-Qv2d0iAsfHy7hJ5YVPvgcxQf)
