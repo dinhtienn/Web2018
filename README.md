@@ -14,34 +14,34 @@ Thực hiện bởi [Nguyễn Đình Tiến](https://github.com/dinhtien12298)
 
 ### Yêu cầu 1: Tách PSD
 
-[Fonts](https://dinhtien12298.github.io/Web2018/views/analysis/fonts.html)
+[Fonts](https://dinhtienn.github.io/Web2018/views/analysis/fonts.html)
 
-[Colors](https://dinhtien12298.github.io/Web2018/views/analysis/colors.html)
+[Colors](https://dinhtienn.github.io/Web2018/views/analysis/colors.html)
 
-[Images](https://dinhtien12298.github.io/Web2018/views/analysis/images.html)
+[Images](https://dinhtienn.github.io/Web2018/views/analysis/images.html)
 
 ### Yêu cầu 2: Layout
 
-[Homepage](https://dinhtien12298.github.io/web2018/images/layout/homepage.png)
+[Homepage](https://dinhtienn.github.io/web2018/images/layout/homepage.png)
 
-[Detail](https://dinhtien12298.github.io/web2018/images/layout/detail.png)
+[Detail](https://dinhtienn.github.io/web2018/images/layout/detail.png)
 
-[Category](https://dinhtien12298.github.io/web2018/images/layout/category.png)
+[Category](https://dinhtienn.github.io/web2018/images/layout/category.png)
 
 ### Yêu cầu 3: Giao diện trang chủ
 
-[Homepage](https://dinhtien12298.github.io/web2018/homepage.html) Deleted
+[Homepage](https://dinhtienn.github.io/web2018/homepage.html) Deleted
 
 ### Yêu cầu 4: Giao diện Category và Detail
 
-[Category](https://dinhtien12298.github.io/web2018/category.html) Deleted
+[Category](https://dinhtienn.github.io/web2018/category.html) Deleted
 
-[Detail](https://dinhtien12298.github.io/web2018/detail.html) Deleted
+[Detail](https://dinhtienn.github.io/web2018/detail.html) Deleted
 
 ## **Thực hành Backend**
 
-[Homepage](https://dinhtien12298.github.io/web2018/homepage.php)
+[Homepage](https://dinhtienn.github.io/web2018/homepage.php)
 
-[Category](https://dinhtien12298.github.io/web2018/category.php)
+[Category](https://dinhtienn.github.io/web2018/category.php)
 
-[Detail](https://dinhtien12298.github.io/web2018/detail.php)
+[Detail](https://dinhtienn.github.io/web2018/detail.php)
